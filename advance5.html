@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLOW & CO. | Luxury Beauty & Salon Experience</title>
+    <!-- Google Fonts for Luxury Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #c5a880; /* Warm Gold */
+            --primary-dark: #a3875f;
+            --bg-light: #faf7f2; /* Soft Cream */
+            --text-dark: #222222; /* Charcoal */
+            --text-muted: #666666;
+            --white: #ffffff;
+            --whatsapp-green: #25D366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .serif {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header / Navigation --- */
+        header {
+            background-color: rgba(250, 247, 242, 0.95);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+
+        .nav-middle {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 400;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* --- Social Media Icons --- */
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .social-icons a {
+            color: var(--text-dark);
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding-top: 140px;
+            padding-bottom: 80px;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(250, 247, 242, 0.85), rgba(250, 247, 242, 0.85)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1920') no-repeat center center/cover;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 35px;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            border-radius: 0;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .btn-primary {
+            background-color: var(--text-dark);
+            color: var(--white);
+            margin-right: 15px;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary);
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--text-dark);
+            color: var(--text-dark);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--text-dark);
+            color: var(--white);
+        }
+
+        .hero-image img {
+            border-radius: 10px;
+            box-shadow: 20px 20px 0px var(--primary);
+        }
+
+        /* --- Global Section Settings --- */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 60px auto;
+            font-weight: 300;
+        }
+
+        /* --- Packages Section --- */
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .package-card {
+            background-color: var(--white);
+            border: 1px solid rgba(197, 168, 128, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .package-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .package-img {
+            height: 240px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .package-content {
+            padding: 30px;
+        }
+
+        .package-price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .package-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .package-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        /* --- Location Section --- */
+        .location {
+            background-color: #f3ede4;
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            border-radius: 4px;
+        }
+
+        .info-details h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .info-item i {
+            color: var(--primary-dark);
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+
+        /* --- Booking Section --- */
+        .booking-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: var(--white);
+            padding: 50px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #dddddd;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp-green);
+            color: var(--white);
+            width: 100%;
+            border: none;
+            padding: 16px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1ebe57;
+        }
+
+        /* --- Floating WhatsApp Icon --- */
+        .floating-wa {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--whatsapp-green);
+            color: var(--white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .floating-wa:hover {
+            transform: scale(1.1);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--text-dark);
+            color: rgba(255,255,255,0.7);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        .footer-socials {
+            justify-content: center;
+            margin-bottom: 20px;
+            gap: 25px;
+        }
+
+        .footer-socials a {
+            color: rgba(255,255,255,0.7);
+            font-size: 1.5rem;
+        }
+
+        .footer-socials a:hover {
+            color: var(--primary);
+        }
+
+        /* --- Responsive Styles --- */
+        @media (max-width: 768px) {
+            .hero-grid, .location-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+            .hero-image {
+                order: -1;
+            }
+            .nav-links {
+                display: none; 
+            }
+            .booking-container {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating WhatsApp Widget -->
+    <a href="https://wa.me/60123456789?text=Hi%20Glow%20and%20Co!%20I'd%20like%20to%20enquire%20about%20your%20services." class="floating-wa" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">GLOW & CO.</a>
+            <div class="nav-middle">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#book">Book Now</a></li>
+                </ul>
+                
+                <!-- NEW: Header Social Icons -->
+                <div class="social-icons">
+                    <a href="https://instagram.com/your_instagram_handle" target="_blank" aria-label="Follow us on Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/your_facebook_page" target="_blank" aria-label="Like us on Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <h1>Your Signature Glow, Reimagined.</h1>
+                <p>Expert hair, modern skin aesthetics, and restorative beauty transformations tailored exclusively for you. Step into an experience crafted to let your natural beauty shine.</p>
+                <a href="#book" class="btn btn-primary">Book Now</a>
+                <a href="https://wa.me/60123456789" class="btn btn-secondary" target="_blank">WhatsApp Chat</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=600&h=700" alt="Salon Pampering Experience">
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages">
+        <div class="container">
+            <h2 class="section-title">Our Signature Curations</h2>
+            <p class="section-subtitle">Select from our most-requested ritual packages designed for ultimate transformation and head-to-toe relaxation.</p>
+            
+            <div class="packages-grid">
+                <!-- Package 1 -->
+                <div class="package-card">
+                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=500" alt="Hair Makeover" class="package-img">
+                    <div class="package-content">
+                        <span class="package-price">$120</span>
+                        <h3>The Crown & Glory</h3>
+                        <p>Includes a master precision haircut, custom restorative hair spa treatment, and a signature luxury blowout style.</p>
+                        <a href="#book" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.8rem;">Select</a>
+                    </div>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="package-card">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=500" alt="Skin Facial" class="package-img">
+                    <div class="package-content">
+                        <span class="package-price">$150</span>
+                        <h3>The Luminous Facial</h3>
+                        <p>An advanced multi-step skin hydration treatment utilizing organic peels and deep tissue sculpting for an immediate radiant glow.</p>
+                        <a href="#book" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.8rem;">Select</a>
+                    </div>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="package-card">
+                    <img src="https://images.unsplash.com/photo-1519415510236-8a5d64c1c7ce?auto=format&fit=crop&q=80&w=500" alt="Total Package" class="package-img">
+                    <div class="package-content">
+                        <span class="package-price">$240</span>
+                        <h3>The Ultimate Ritual</h3>
+                        <p>Enjoy our top-tier experience combining the Crown & Glory ritual with the Luminous Facial. Free glass of complementary champagne.</p>
+                        <a href="#book" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.8rem;">Select</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location" id="location">
+        <div class="container location-grid">
+            <div class="info-details">
+                <h2>Visit Our Sanctuary</h2>
+                <p style="color: var(--text-muted); margin-bottom: 30px; font-weight:300;">Centrally located with complimentary private parking. Drop by or schedule an afternoon escape.</p>
+                
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>Address</strong>
+                        <p style="color: var(--text-muted);">123 Elegance Boulevard, Suite 400, Luxury Quarter</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <strong>Opening Hours</strong>
+                        <p style="color: var(--text-muted);">Tuesday – Saturday: 9:00 AM – 8:00 PM<br>Sunday: 10:00 AM – 5:00 PM <br><em>(Closed on Mondays)</em></p>
+                    </div>
+                </div>
+            </div>
+            <div class="map-container">
+                <!-- Placeholder Map (Standard Embed) -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2151333792446!2d-73.9878441234285!3d40.757989334839845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25859a1c54efd%3A0x22f1d24d27c67fc2!2sTimes%20Square!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="book">
+        <div class="container">
+            <h2 class="section-title">Request An Appointment</h2>
+            <p class="section-subtitle">Fill out your preference below. Submitting will immediately open WhatsApp to complete your booking confirmation with our receptionist.</p>
+            
+            <div class="booking-container">
+                <form id="whatsappForm">
+                    <div class="form-group">
+                        <label for="name">Your Full Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="e.g. Jane Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Select Service / Package</label>
+                        <select id="service" class="form-control" required>
+                            <option value="" disabled selected>Choose an option</option>
+                            <option value="The Crown & Glory ($120)">The Crown & Glory ($120)</option>
+                            <option value="The Luminous Facial ($150)">The Luminous Facial ($150)</option>
+                            <option value="The Ultimate Ritual ($240)">The Ultimate Ritual ($240)</option>
+                            <option value="General Custom Consultation">General Custom Enquiry</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">Preferred Date & Time</label>
+                        <input type="datetime-local" id="date" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Special Requests / Notes</label>
+                        <textarea id="notes" class="form-control" rows="3" placeholder="Any skin sensitivities, hair lengths, or stylist preferences..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Book via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- NEW: Footer Social Icons -->
+            <div class="social-icons footer-socials">
+                <a href="https://instagram.com/your_instagram_handle" target="_blank" aria-label="Follow us on Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://facebook.com/your_facebook_page" target="_blank" aria-label="Like us on Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+            <p>&copy; 2026 Glow & Co. Salon. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Form Handler Script -->
+    <script>
+        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent standard page refresh
+
+            // Enter YOUR real WhatsApp business number here (with country code, no "+" or spaces)
+            const salonPhoneNumber = "60123456789"; 
+
+            // Grab inputs from the form
+            const name = document.getElementById('name').value;
+            const service = document.getElementById('service').value;
+            const datetime = document.getElementById('date').value;
+            const notes = document.getElementById('notes').value || "None";
+
+            // Format date beautifully for reading
+            const formattedDate = new Date(datetime).toLocaleString();
+
+            // Create the clean structured message text
+            const message = `Hello Glow %26 Co.! I would like to request an appointment.%0A%0A` +
+                            `*Name:* ${encodeURIComponent(name)}%0A` +
+                            `*Service:* ${encodeURIComponent(service)}%0A` +
+                            `*Preferred Time:* ${encodeURIComponent(formattedDate)}%0A` +
+                            `*Notes:* ${encodeURIComponent(notes)}`;
+
+            // Fire the WhatsApp Deep-Link API
+            const whatsappURL = `https://wa.me/${salonPhoneNumber}?text=${message}`;
+            
+            // Open link in a new tab
+            window.open(whatsappURL, '_blank');
+        });
+    </script>
+</body>
+</html>
