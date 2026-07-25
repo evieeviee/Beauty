@@ -1774,6 +1774,97 @@ footer a:hover{
     border-radius:0;
   }
 }
+
+/* SIMPLIFIED TWO-PACKAGE COLLECTION */
+
+.design-actions{
+  grid-template-columns:1fr;
+}
+
+.preview-info{
+  text-align:center;
+}
+
+@media(max-width:1020px){
+  .nav-links{
+    position:static;
+    max-height:none;
+    overflow:visible;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    padding:0;
+    border:0;
+    border-radius:0;
+    background:transparent;
+    box-shadow:none;
+  }
+
+  .menu-btn{
+    display:none;
+  }
+}
+
+@media(max-width:700px){
+  .nav{
+    min-height:74px;
+    gap:8px;
+  }
+
+  .brand-copy span{
+    display:none;
+  }
+
+  .nav-links{
+    gap:5px;
+  }
+
+  .nav-link{
+    padding:7px 5px;
+    font-size:10px;
+  }
+
+  .nav-cta{
+    padding:8px 10px;
+    font-size:9px;
+  }
+
+  .preview-toolbar{
+    grid-template-columns:1fr auto;
+    gap:8px;
+  }
+
+  .preview-info{
+    grid-column:1/-1;
+    grid-row:1;
+    text-align:left;
+  }
+
+  #closePreview{
+    grid-column:1;
+    grid-row:2;
+    width:auto;
+    padding:0 12px;
+    font-size:10px;
+  }
+
+  #closePreview:before{
+    content:"";
+  }
+
+  #backToPlanniqueFromPreview{
+    grid-column:2;
+    grid-row:2;
+    width:auto;
+    padding:0 12px;
+    font-size:10px;
+  }
+
+  #backToPlanniqueFromPreview:before{
+    content:"";
+  }
+}
+
 </style>
 </head>
 
@@ -1784,8 +1875,8 @@ footer a:hover{
 
     <button
       class="brand nav-route"
-      data-route="home"
-      aria-label="Go to home"
+      data-route="essential"
+      aria-label="Go to Essential collection"
       style="border:0;background:none;text-align:left"
     >
       <span class="brand-mark">P</span>
@@ -1797,18 +1888,9 @@ footer a:hover{
     </button>
 
     <nav class="nav-links" id="navLinks">
-      <button class="nav-link nav-route" data-route="home">Home</button>
-      <button class="nav-link nav-route" data-route="portfolio">Portfolio</button>
-      <button class="nav-link nav-route" data-route="essential">Essential</button>
+      <button class="nav-link nav-route active" data-route="essential">Essential</button>
       <button class="nav-link nav-route" data-route="signature">Signature</button>
-      <button class="nav-link nav-route" data-route="packages">Packages</button>
-      <button class="nav-link nav-route" data-route="benefits">Benefits</button>
-      <button class="nav-link nav-route" data-route="languages">Bilingual</button>
-      <button class="nav-link nav-route" data-route="contact">Contact</button>
-
-      <button class="nav-cta nav-route" data-route="contact">
-        Start a Project
-      </button>
+      <button class="nav-cta" id="backToPlannique">← Back to Plannique</button>
     </nav>
 
     <button class="menu-btn" id="menuBtn" aria-label="Open navigation">
@@ -1820,326 +1902,30 @@ footer a:hover{
 
 <main>
 
-<!-- HOME -->
-
-<section class="page active" data-page="home">
-
-  <div class="home-hero">
-    <div class="wrap home-grid">
-
-      <div>
-        <div class="home-badge">
-          ✦ Website designs for hair salons, aesthetic clinics & beauty studios
-        </div>
-
-        <h1>
-          Elevate your salon brand before every <em>appointment.</em>
-        </h1>
-
-        <p>
-          Explore professional one-page and multi-page website designs crafted specifically
-          for hair salons, nail spas, lash & brow studios, aesthetic centers, and wellness sanctuaries.
-        </p>
-
-        <div class="page-actions">
-          <button class="btn btn-dark nav-route" data-route="portfolio">
-            Explore Designs
-          </button>
-
-          <button class="btn btn-light nav-route" data-route="packages">
-            Compare Packages
-          </button>
-        </div>
-
-        <div class="home-points">
-          <span>Service Menu & Pricing</span>
-          <span>WhatsApp Booking</span>
-          <span>Stylist Profiles</span>
-          <span>Bilingual-Ready</span>
-        </div>
-      </div>
-
-      <div class="home-visual">
-        <div class="home-image"></div>
-
-        <div class="home-card">
-          <small>Designed for beauty</small>
-
-          <strong>
-            Turn website browsers into loyal salon clients.
-          </strong>
-
-          <p>
-            Showcase your treatment menus, portfolio transformations, salon location,
-            and instant booking links in one stunning experience.
-          </p>
-        </div>
-
-        <div class="home-price">
-          <span>Website packages from</span>
-          <strong>RM499</strong>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="content-section">
-    <div class="wrap">
-
-      <div class="eyebrow">Choose Your Package</div>
-
-      <h2 class="title">
-        Two clear options for different salon & studio needs
-      </h2>
-
-      <p class="copy">
-        Essential (Starter) provides a clean, effective one-page salon website. Signature (Advance & Premium) offers
-        a comprehensive multi-page layout with bilingual options and automated appointment inquiry tools.
-      </p>
-
-      <div class="home-package-grid" style="margin-top:40px">
-
-        <article class="home-package">
-          <div class="home-package-label">Starter Collection</div>
-
-          <h2>Essential</h2>
-
-          <div class="home-package-price">RM499</div>
-
-          <p>
-            A high-converting single-page website ideal for independent stylists, lash artists, or boutique nail salons.
-          </p>
-
-          <div class="home-package-features">
-            <span>One complete scrolling page</span>
-            <span>Up to 7 sections</span>
-            <span>One language</span>
-            <span>WhatsApp booking & inquiry</span>
-            <span>Google Maps location</span>
-          </div>
-
-          <button
-            class="btn btn-light nav-route"
-            data-route="essential"
-            style="margin-top:25px"
-          >
-            View Starter Designs
-          </button>
-        </article>
-
-        <article class="home-package signature">
-          <div class="home-package-label">Advance & Premium Collection</div>
-
-          <h2>Signature</h2>
-
-          <div class="home-package-price">RM1,299</div>
-
-          <p>
-            A full-scale beauty website featuring multi-page structure, team profiles, treatment care guides, and bilingual switcher.
-          </p>
-
-          <div class="home-package-features">
-            <span>Up to 6 page views</span>
-            <span>Two-language setup</span>
-            <span>Treatment & Transformation galleries</span>
-            <span>Smart consultation form</span>
-            <span>3 months minor support</span>
-          </div>
-
-          <button
-            class="btn btn-blush nav-route"
-            data-route="signature"
-            style="margin-top:25px"
-          >
-            View Signature Designs
-          </button>
-        </article>
-
-      </div>
-    </div>
-  </div>
-
-</section>
-
-<!-- PORTFOLIO -->
-
-<section class="page" data-page="portfolio">
-
-  <div class="page-hero">
-    <div class="wrap page-hero-grid">
-
-      <div>
-        <div class="eyebrow">Beauty Portfolio</div>
-
-        <h1>
-          Choose a design that matches your salon vibe
-        </h1>
-
-        <p>
-          Preview all 15 salon website templates directly inside this showcase. Close
-          the preview anytime to return right back to where you were.
-        </p>
-      </div>
-
-      <div class="page-visual">
-        <img
-          src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=85"
-          alt="Salon website portfolio preview"
-        >
-      </div>
-
-    </div>
-  </div>
-
-  <div class="content-section">
-    <div class="wrap">
-
-      <div class="portfolio-tools">
-
-        <div class="filter-tabs">
-          <button class="filter-btn active" data-filter="all">
-            All Designs
-          </button>
-
-          <button class="filter-btn" data-filter="essential">
-            Starter (Essential)
-          </button>
-
-          <button class="filter-btn" data-filter="signature">
-            Signature (Advance & Premium)
-          </button>
-
-          <button class="filter-btn" data-filter="bilingual">
-            Bilingual-Ready
-          </button>
-        </div>
-
-        <div class="search-box">
-          <span>⌕</span>
-
-          <input
-            id="portfolioSearch"
-            type="search"
-            placeholder="Search hair, nail, lash, aesthetic, starter, advance..."
-          >
-        </div>
-
-      </div>
-
-      <div id="portfolioEssentialSection">
-
-        <div class="collection-intro">
-          <div class="collection-name">
-
-            <div class="collection-icon">✦</div>
-
-            <div>
-              <h2>Essential Collection (Starter Templates)</h2>
-              <p>RM499 · High-converting single-page salon websites</p>
-            </div>
-
-          </div>
-
-          <div class="collection-count" id="essentialCount"></div>
-        </div>
-
-        <div class="design-grid" id="portfolioEssentialGrid"></div>
-
-      </div>
-
-      <div id="portfolioSignatureSection">
-
-        <div class="collection-intro">
-          <div class="collection-name">
-
-            <div class="collection-icon">◆</div>
-
-            <div>
-              <h2>Signature Collection (Advance & Premium Templates)</h2>
-              <p>RM1,299 · Multi-page and bilingual-ready designs</p>
-            </div>
-
-          </div>
-
-          <div class="collection-count" id="signatureCount"></div>
-        </div>
-
-        <div class="design-grid" id="portfolioSignatureGrid"></div>
-
-      </div>
-
-      <div class="empty-state" id="portfolioEmpty">
-        No matching design found. Try searching for "hair", "nail", "advance", or "premium".
-      </div>
-
-    </div>
-  </div>
-
-</section>
-
 <!-- ESSENTIAL -->
 
-<section class="page" data-page="essential">
+<section class="page active" data-page="essential">
 
   <div class="page-hero">
-    <div class="wrap page-hero-grid">
+    <div class="wrap">
 
-      <div>
-        <div class="eyebrow">RM499 Essential</div>
+      <div class="eyebrow">Essential Package · RM499</div>
 
-        <h1>
-          Sleek, focused single-page websites for beauty studios
-        </h1>
+      <h1>
+        One-page beauty & salon website themes
+      </h1>
 
-        <p>
-          Starter templates pack your service menu, pricing, stylist highlight, customer reviews,
-          salon location, and WhatsApp appointment booking into one smooth scrolling layout.
-        </p>
-
-        <div class="page-actions">
-          <button class="btn btn-dark nav-route" data-route="packages">
-            View Package Details
-          </button>
-
-          <a
-            class="btn btn-wa"
-            href="https://wa.me/60189079798?text=Hi%2C%20I%20am%20interested%20in%20the%20Essential%20RM499%20beauty%20salon%20website%20package."
-            target="_blank"
-          >
-            Choose Essential
-          </a>
-        </div>
-      </div>
-
-      <div class="page-visual">
-        <img
-          src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=85"
-          alt="Essential salon website"
-        >
-      </div>
+      <p>
+        Focused one-page website samples for hair salons, nail spas, lash and brow studios,
+        head spas, makeup artists and boutique beauty businesses.
+      </p>
 
     </div>
   </div>
 
   <div class="content-section">
     <div class="wrap">
-
-      <div class="collection-intro" style="margin-top:0">
-        <div class="collection-name">
-
-          <div class="collection-icon">✦</div>
-
-          <div>
-            <h2>Starter Collection</h2>
-            <p>Click preview to inspect live interactive demos</p>
-          </div>
-
-        </div>
-      </div>
-
       <div class="design-grid" id="essentialPageGrid"></div>
-
     </div>
   </div>
 
@@ -2150,650 +1936,28 @@ footer a:hover{
 <section class="page" data-page="signature">
 
   <div class="page-hero">
-    <div class="wrap page-hero-grid">
+    <div class="wrap">
 
-      <div>
-        <div class="eyebrow">RM1,299 Signature</div>
+      <div class="eyebrow">Signature Package · RM1,299</div>
 
-        <h1>
-          Complete multi-page experiences for established salons & clinics
-        </h1>
+      <h1>
+        Premium multi-page beauty website themes
+      </h1>
 
-        <p>
-          Advance & Premium templates offer additional pages for detailed treatment breakdown,
-          before/after galleries, expert team bios, FAQ, and custom consultation forms.
-        </p>
-
-        <div class="page-actions">
-          <button class="btn btn-dark nav-route" data-route="benefits">
-            View Complimentary Benefits
-          </button>
-
-          <a
-            class="btn btn-wa"
-            href="https://wa.me/60189079798?text=Hi%2C%20I%20am%20interested%20in%20the%20Signature%20RM1299%20beauty%20salon%20website%20package."
-            target="_blank"
-          >
-            Choose Signature
-          </a>
-        </div>
-      </div>
-
-      <div class="page-visual">
-        <img
-          src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=85"
-          alt="Signature salon website"
-        >
-      </div>
+      <p>
+        Advanced website samples with up to seven page views for established salons,
+        aesthetic clinics, premium spas and multi-service beauty brands.
+      </p>
 
     </div>
   </div>
 
   <div class="content-section">
     <div class="wrap">
-
-      <div class="collection-intro" style="margin-top:0">
-        <div class="collection-name">
-
-          <div class="collection-icon">◆</div>
-
-          <div>
-            <h2>Advance & Premium Collection</h2>
-            <p>Multi-page & bilingual-ready website designs</p>
-          </div>
-
-        </div>
-      </div>
-
       <div class="design-grid" id="signaturePageGrid"></div>
-
     </div>
   </div>
 
-</section>
-
-<!-- PACKAGES -->
-
-<section class="page" data-page="packages">
-
-  <div class="page-hero">
-    <div class="wrap page-hero-grid">
-
-      <div>
-        <div class="eyebrow">Website Packages</div>
-
-        <h1>
-          Select the optimal website package for your salon
-        </h1>
-
-        <p>
-          Essential provides a stylish single-page setup. Signature gives you
-          multi-page navigation, bilingual switching, consultation forms, and extended support.
-        </p>
-      </div>
-
-      <div class="page-visual">
-        <img
-          src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1200&q=85"
-          alt="Beauty salon website packages"
-        >
-      </div>
-
-    </div>
-  </div>
-
-  <div class="content-section">
-    <div class="wrap">
-
-      <div class="package-grid">
-
-        <article class="package-card">
-
-          <div class="package-badge">Essential</div>
-
-          <h2>Starter Page</h2>
-
-          <div class="package-price">
-            <small>RM</small>499
-          </div>
-
-          <p class="package-desc">
-            Perfect for boutique salons and independent beauty specialists needing an elegant online storefront.
-          </p>
-
-          <div class="package-features">
-            <div class="package-feature">One complete scrolling page</div>
-            <div class="package-feature">Up to 7 website sections</div>
-            <div class="package-feature">One language setup</div>
-            <div class="package-feature">Mobile & tablet responsive design</div>
-            <div class="package-feature">Salon introduction & brand bio</div>
-            <div class="package-feature">Categorised service & price menu</div>
-            <div class="package-feature">Stylist highlight or gallery</div>
-            <div class="package-feature">Client reviews & testimonials</div>
-            <div class="package-feature">WhatsApp booking button</div>
-            <div class="package-feature">Google Maps & address integration</div>
-            <div class="package-feature">One revision round</div>
-            <div class="package-feature">7 days minor support</div>
-          </div>
-
-          <a
-            class="btn btn-light"
-            href="https://wa.me/60189079798?text=Hi%2C%20I%20am%20interested%20in%20the%20Essential%20RM499%20beauty%20salon%20website%20package."
-            target="_blank"
-          >
-            Choose Essential
-          </a>
-
-        </article>
-
-        <article class="package-card signature">
-
-          <div class="popular">MOST POPULAR</div>
-          <div class="package-badge">Signature</div>
-
-          <h2>Advance / Premium</h2>
-
-          <div class="package-price">
-            <small>RM</small>1,299
-          </div>
-
-          <p class="package-desc">
-            For multi-stylist salons, medical aesthetic clinics, and luxury beauty centers requiring complete page separation.
-          </p>
-
-          <div class="package-features">
-            <div class="package-feature">Up to 6 page views</div>
-            <div class="package-feature">High-end aesthetic visual design</div>
-            <div class="package-feature">Two-language website setup</div>
-            <div class="package-feature">Desktop & mobile language switcher</div>
-            <div class="package-feature">Dedicated treatments page</div>
-            <div class="package-feature">Before & After transformation showcase</div>
-            <div class="package-feature">Team profiles & specialization pages</div>
-            <div class="package-feature">Aftercare guides & FAQ page</div>
-            <div class="package-feature">WhatsApp quick reservation system</div>
-            <div class="package-feature">Smart client consultation form</div>
-            <div class="package-feature">Google Maps integration</div>
-            <div class="package-feature">Three revision rounds</div>
-            <div class="package-feature">3 months minor support</div>
-          </div>
-
-          <a
-            class="btn btn-blush"
-            href="https://wa.me/60189079798?text=Hi%2C%20I%20am%20interested%20in%20the%20Signature%20RM1299%20beauty%20salon%20website%20package."
-            target="_blank"
-          >
-            Choose Signature
-          </a>
-
-        </article>
-
-      </div>
-
-      <div class="compare-wrap">
-        <table class="compare">
-
-          <thead>
-            <tr>
-              <th>Feature</th>
-              <th>Essential (Starter)</th>
-              <th>Signature (Advance/Premium)</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>Website structure</td>
-              <td>One page</td>
-              <td>Multiple page views</td>
-            </tr>
-
-            <tr>
-              <td>Sections or pages</td>
-              <td>Up to 7 sections</td>
-              <td>Up to 6 page views</td>
-            </tr>
-
-            <tr>
-              <td>Mobile responsive</td>
-              <td class="yes">✓</td>
-              <td class="yes">✓</td>
-            </tr>
-
-            <tr>
-              <td>WhatsApp appointment links</td>
-              <td class="yes">✓</td>
-              <td class="yes">✓</td>
-            </tr>
-
-            <tr>
-              <td>Google Maps embed</td>
-              <td class="yes">✓</td>
-              <td class="yes">✓</td>
-            </tr>
-
-            <tr>
-              <td>Languages included</td>
-              <td>1</td>
-              <td>2</td>
-            </tr>
-
-            <tr>
-              <td>Language switcher</td>
-              <td class="no">—</td>
-              <td class="yes">✓</td>
-            </tr>
-
-            <tr>
-              <td>Smart consultation form</td>
-              <td class="no">—</td>
-              <td class="yes">✓</td>
-            </tr>
-
-            <tr>
-              <td>Before & After gallery</td>
-              <td>Basic image grid</td>
-              <td class="yes">✓</td>
-            </tr>
-
-            <tr>
-              <td>Detailed treatment pages</td>
-              <td class="no">—</td>
-              <td class="yes">✓</td>
-            </tr>
-
-            <tr>
-              <td>Revision rounds</td>
-              <td>1</td>
-              <td>3</td>
-            </tr>
-
-            <tr>
-              <td>Minor support</td>
-              <td>7 days</td>
-              <td>3 months</td>
-            </tr>
-          </tbody>
-
-        </table>
-      </div>
-
-    </div>
-  </div>
-
-</section>
-
-<!-- BENEFITS -->
-
-<section class="page" data-page="benefits">
-
-  <div class="page-hero">
-    <div class="wrap page-hero-grid">
-
-      <div>
-        <div class="eyebrow">Complimentary Benefits</div>
-
-        <h1>
-          Built-in features designed specifically for salon growth
-        </h1>
-
-        <p>
-          Every Signature website comes packed with useful appointment features that make
-          it effortless for new clients to discover your treatments and book a slot.
-        </p>
-      </div>
-
-      <div class="page-visual">
-        <img
-          src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1200&q=85"
-          alt="Salon website benefits"
-        >
-      </div>
-
-    </div>
-  </div>
-
-  <div class="content-section">
-    <div class="wrap">
-
-      <div class="benefits-grid">
-
-        <article class="benefit-card">
-          <div class="benefit-icon">🌐</div>
-          <h3>Bilingual Website Setup</h3>
-          <p>
-            Seamless language switching between English and Chinese (or BM) to accommodate all clients.
-          </p>
-        </article>
-
-        <article class="benefit-card">
-          <div class="benefit-icon">💇‍♀️</div>
-          <h3>Smart Consultation Form</h3>
-          <p>
-            Collect client hair/skin condition details, preferred stylist, treatment, date, and time slot.
-          </p>
-        </article>
-
-        <article class="benefit-card">
-          <div class="benefit-icon">💬</div>
-          <h3>WhatsApp Fast Booking</h3>
-          <p>
-            Pre-filled WhatsApp messages containing chosen service details for effortless customer enquiries.
-          </p>
-        </article>
-
-        <article class="benefit-card">
-          <div class="benefit-icon">▣</div>
-          <h3>Salon QR Code</h3>
-          <p>
-            A high-resolution QR code for your reception desk, flyers, or Instagram to direct clients instantly.
-          </p>
-        </article>
-
-        <article class="benefit-card">
-          <div class="benefit-icon">📱</div>
-          <h3>Social Media Integration</h3>
-          <p>
-            Direct links to your Instagram feed, Facebook page, Google Reviews, and WhatsApp.
-          </p>
-        </article>
-
-        <article class="benefit-card">
-          <div class="benefit-icon">🛠</div>
-          <h3>3 Months Support</h3>
-          <p>
-            Hassle-free updates for price menus, new team members, promo banners, and phone numbers after launch.
-          </p>
-        </article>
-
-      </div>
-
-      <div class="benefit-note">
-        <strong>Important:</strong>
-        Bilingual setup includes the code implementation and UI switcher. Final approved treatment menu content
-        should be supplied in both languages. Translation services can be arranged upon request.
-      </div>
-
-    </div>
-  </div>
-
-</section>
-
-<!-- BILINGUAL -->
-
-<section class="page" data-page="languages">
-
-  <div class="page-hero">
-    <div class="wrap page-hero-grid">
-
-      <div>
-        <div class="eyebrow">Bilingual Experience</div>
-
-        <h1>
-          Serve diverse salon clientele effortlessly
-        </h1>
-
-        <p>
-          Signature websites allow your clients to view your services in their preferred language.
-          Switch smoothly between English, Chinese, or Malay with instant text transitions.
-        </p>
-      </div>
-
-      <div class="page-visual">
-        <img
-          src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=85"
-          alt="Bilingual salon website"
-        >
-      </div>
-
-    </div>
-  </div>
-
-  <div class="content-section">
-    <div class="wrap language-layout">
-
-      <div>
-        <div class="eyebrow">Interactive Demo</div>
-
-        <h2 class="title">
-          One salon website, dual-language simplicity
-        </h2>
-
-        <p class="copy">
-          The language switcher fits right into your header navigation bar. Clients stay on
-          their active page while all service descriptions and buttons update immediately.
-        </p>
-
-        <div class="language-points">
-
-          <div class="language-point">
-            <strong>Customizable language pairing</strong>
-            <span>
-              Choose English + Chinese, English + Malay, or any combination your target audience uses.
-            </span>
-          </div>
-
-          <div class="language-point">
-            <strong>Seamless in-page switching</strong>
-            <span>
-              No page reloads required—maintaining smooth navigation for busy clients on mobile.
-            </span>
-          </div>
-
-          <div class="language-point">
-            <strong>Consistent visual elegance</strong>
-            <span>
-              Typography and layout automatically adapt to preserve clean aesthetics in all languages.
-            </span>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="language-demo">
-        <div class="demo-window">
-
-          <div class="demo-bar">
-            <div class="demo-dots">
-              <i></i>
-              <i></i>
-              <i></i>
-            </div>
-
-            <div class="lang-buttons">
-              <button class="lang-btn active" data-demo-language="en">
-                EN
-              </button>
-
-              <button class="lang-btn" data-demo-language="zh">
-                中文
-              </button>
-            </div>
-          </div>
-
-          <div class="demo-content">
-
-            <small id="demoEyebrow">
-              Premium Beauty & Hair Studio
-            </small>
-
-            <h3 id="demoTitle">
-              Transforming your beauty with bespoke care.
-            </h3>
-
-            <p id="demoText">
-              Experience luxurious hair styling, restorative scalp treatments, and professional nail aesthetics tailored to you.
-            </p>
-
-            <button
-              class="btn btn-light"
-              id="demoButton"
-              type="button"
-              style="margin-top:21px"
-            >
-              Book Appointment
-            </button>
-
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section class="page" data-page="contact">
-
-  <div class="page-hero">
-    <div class="wrap page-hero-grid">
-
-      <div>
-        <div class="eyebrow">Start a Project</div>
-
-        <h1>
-          Let's build your dream salon website
-        </h1>
-
-        <p>
-          Fill out the quick form below. We will compile your details and open
-          a pre-formatted enquiry directly in WhatsApp.
-        </p>
-      </div>
-
-      <div class="page-visual">
-        <img
-          src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=85"
-          alt="Start a beauty salon website project"
-        >
-      </div>
-
-    </div>
-  </div>
-
-  <div class="content-section">
-    <div class="wrap contact-grid">
-
-      <aside class="contact-card">
-
-        <h2>Contact Plannique</h2>
-
-        <p class="copy">
-          Have questions before starting? Send us a quick message via WhatsApp.
-        </p>
-
-        <div class="contact-details">
-
-          <div class="contact-detail">
-            <strong>WhatsApp</strong>
-            <span>+60 18-907 9798</span>
-          </div>
-
-          <div class="contact-detail">
-            <strong>Email</strong>
-            <span>hello@plannique.com</span>
-          </div>
-
-          <div class="contact-detail">
-            <strong>Industry Focus</strong>
-            <span>Hair salons, nail spas, lash/brow studios & aesthetic clinics</span>
-          </div>
-
-          <div class="contact-detail">
-            <strong>Service Coverage</strong>
-            <span>Malaysia & international remote web design</span>
-          </div>
-
-        </div>
-
-        <a
-          class="btn btn-wa"
-          href="https://wa.me/60189079798?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20a%20beauty%20salon%20website."
-          target="_blank"
-          style="width:100%;margin-top:20px"
-        >
-          Start WhatsApp Consultation
-        </a>
-
-      </aside>
-
-      <div class="form-card">
-
-        <h2>Quick Project Enquiry</h2>
-
-        <form class="form-grid" id="enquiryForm">
-
-          <input
-            id="customerName"
-            type="text"
-            placeholder="Your name"
-            required
-          >
-
-          <input
-            id="businessName"
-            type="text"
-            placeholder="Salon / Studio / Clinic name"
-            required
-          >
-
-          <select id="selectedPackage" required>
-            <option value="">Select package</option>
-            <option>Essential RM499 (Starter)</option>
-            <option>Signature RM1,299 (Advance / Premium)</option>
-            <option>Not sure yet</option>
-          </select>
-
-          <select id="selectedTheme">
-            <option value="">Select preferred template</option>
-          </select>
-
-          <select id="languageRequirement">
-            <option value="">Language requirement</option>
-            <option>One language</option>
-            <option>Two languages (Bilingual)</option>
-            <option>Not sure yet</option>
-          </select>
-
-          <textarea
-            id="customerMessage"
-            placeholder="Tell us about your salon services, current location, or specific website ideas"
-          ></textarea>
-
-          <button class="btn btn-dark" type="submit">
-            Send Enquiry to WhatsApp
-          </button>
-
-        </form>
-
-        <div class="form-note">
-          Submitting will launch WhatsApp with your inputs ready to send.
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-
-</section>
-
-<section class="page" data-page="not-found">
-  <div class="not-found">
-
-    <h1>Page not found</h1>
-
-    <p>The requested page is not available.</p>
-
-    <button
-      class="btn btn-dark nav-route"
-      data-route="home"
-      style="margin-top:22px"
-    >
-      Return Home
-    </button>
-
-  </div>
 </section>
 
 </main>
@@ -2810,44 +1974,28 @@ footer a:hover{
         </div>
 
         <p class="footer-copy">
-          Tailored website collections designed specifically for beauty salons, hair dressers,
-          aesthetic clinics, nail bars, and lash studios.
+          Essential and Signature website samples for beauty salons, aesthetic clinics,
+          nail bars, hair studios and wellness businesses.
         </p>
       </div>
 
       <div>
-        <h4>Portfolio</h4>
-
-        <button class="nav-route" data-route="portfolio">
-          All Designs
-        </button>
+        <h4>Packages</h4>
 
         <button class="nav-route" data-route="essential">
-          Starter Collection
+          Essential · RM499
         </button>
 
         <button class="nav-route" data-route="signature">
-          Signature Collection
+          Signature · RM1,299
         </button>
       </div>
 
       <div>
-        <h4>Information</h4>
+        <h4>Return</h4>
 
-        <button class="nav-route" data-route="packages">
-          Packages
-        </button>
-
-        <button class="nav-route" data-route="benefits">
-          Complimentary Benefits
-        </button>
-
-        <button class="nav-route" data-route="languages">
-          Bilingual Websites
-        </button>
-
-        <button class="nav-route" data-route="contact">
-          Contact
+        <button id="footerBackToPlannique">
+          ← Back to Plannique
         </button>
       </div>
 
@@ -2861,13 +2009,7 @@ footer a:hover{
   </div>
 </footer>
 
-<a
-  class="float-wa"
-  href="https://wa.me/60189079798?text=Hi%2C%20I%20would%20like%20to%20ask%20about%20a%20beauty%20salon%20website."
-  target="_blank"
->
-  💬 Enquire
-</a>
+
 
 <!-- PREVIEW MODAL -->
 
@@ -2876,7 +2018,7 @@ footer a:hover{
   <div class="preview-toolbar">
 
     <button class="preview-back" id="closePreview" type="button">
-      ← Back to Portfolio
+      ← Back to Collection
     </button>
 
     <div class="preview-info">
@@ -2884,59 +2026,9 @@ footer a:hover{
       <span id="previewThemeMeta">Package · Design code</span>
     </div>
 
-    <div class="preview-actions">
-
-      <div class="device-buttons">
-
-        <button
-          class="device-btn active"
-          data-device="desktop"
-          title="Desktop preview"
-          type="button"
-        >
-          🖥
-        </button>
-
-        <button
-          class="device-btn"
-          data-device="tablet"
-          title="Tablet preview"
-          type="button"
-        >
-          ▯
-        </button>
-
-        <button
-          class="device-btn"
-          data-device="mobile"
-          title="Mobile preview"
-          type="button"
-        >
-          📱
-        </button>
-
-      </div>
-
-      <a
-        class="preview-action-btn"
-        id="openFullDemo"
-        href="#"
-        target="_blank"
-        rel="noopener"
-      >
-        Open Full Demo ↗
-      </a>
-
-      <a
-        class="preview-action-btn choose"
-        id="choosePreviewTheme"
-        href="#"
-        target="_blank"
-      >
-        Choose Theme
-      </a>
-
-    </div>
+    <button class="preview-back" id="backToPlanniqueFromPreview" type="button">
+      ← Back to Plannique
+    </button>
 
   </div>
 
@@ -3140,112 +2232,32 @@ const designs = [
 
 /* ROUTING */
 
-const validRoutes = [
-  "home",
-  "portfolio",
-  "essential",
-  "signature",
-  "packages",
-  "benefits",
-  "languages",
-  "contact"
-];
-
+const validRoutes = ["essential","signature"];
 const pages = [...document.querySelectorAll("[data-page]")];
 const navRoutes = [...document.querySelectorAll(".nav-route")];
 const navLinks = [...document.querySelectorAll(".nav-links .nav-link")];
 
-const mobileNav = document.getElementById("navLinks");
-const menuBtn = document.getElementById("menuBtn");
-
-function getCurrentRoute(){
-  const raw = location.hash
-    .replace(/^#\/?/,"")
-    .split("?")[0]
-    .trim();
-
-  return raw || "home";
-}
-
-function showPage(route,updateHash=true){
-  const resolved = validRoutes.includes(route)
-    ? route
-    : "not-found";
+function showPage(route){
+  const resolved = validRoutes.includes(route) ? route : "essential";
 
   pages.forEach(page=>{
-    page.classList.toggle(
-      "active",
-      page.dataset.page === resolved
-    );
+    page.classList.toggle("active",page.dataset.page===resolved);
   });
 
   navLinks.forEach(link=>{
-    link.classList.toggle(
-      "active",
-      link.dataset.route === route
-    );
+    link.classList.toggle("active",link.dataset.route===resolved);
   });
 
-  const pageName = resolved === "home"
-    ? "Beauty & Salon Website Collection"
-    : resolved.charAt(0).toUpperCase()+resolved.slice(1);
-
-  document.title = `${pageName} | Plannique Design Co`;
-
-  mobileNav.classList.remove("open");
-  document.body.classList.remove("menu-open");
-
-  window.scrollTo({
-    top:0,
-    behavior:"instant"
-  });
-
-  if(updateHash && validRoutes.includes(route)){
-    const target = route === "home"
-      ? "#/"
-      : `#/${route}`;
-
-    if(location.hash !== target){
-      history.pushState({route},"",target);
-    }
-  }
+  window.scrollTo(0,0);
 }
 
 navRoutes.forEach(button=>{
   button.addEventListener("click",()=>{
-    showPage(button.dataset.route,true);
+    showPage(button.dataset.route);
   });
 });
 
-menuBtn.addEventListener("click",()=>{
-  mobileNav.classList.toggle("open");
-  document.body.classList.toggle("menu-open");
-});
-
-window.addEventListener("hashchange",()=>{
-  if(!previewModal.classList.contains("open")){
-    showPage(getCurrentRoute(),false);
-  }
-});
-
 /* DESIGN CARDS */
-
-function createWhatsAppLink(design){
-  const packageName = design.package === "essential"
-    ? "Essential (Starter) RM499"
-    : "Signature (Advance/Premium) RM1,299";
-
-  const message =
-`Hi, I am interested in the ${design.name} beauty salon website template.
-
-Design code: ${design.code}
-Template file: ${design.file}
-Package: ${packageName}
-
-I would like to know more about customizing this design for my salon / studio.`;
-
-  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-}
 
 function createDesignCard(design){
   const packageName = design.package === "essential"
@@ -3253,8 +2265,8 @@ function createDesignCard(design){
     : "Signature · RM1,299";
 
   const structure = design.package === "essential"
-    ? "Single-page salon website"
-    : "Multi-page salon website";
+    ? "One-page beauty website"
+    : "Up to 7 page views";
 
   return `
     <article class="design-card">
@@ -3263,7 +2275,7 @@ function createDesignCard(design){
 
         <img
           src="${design.image}"
-          alt="${design.name} salon website design"
+          alt="${design.name} beauty website design"
         >
 
         <span class="package-label">
@@ -3294,27 +2306,17 @@ function createDesignCard(design){
 
         <div class="design-package">
           <strong>${packageName}</strong>
-          <span>${structure} (${design.file})</span>
+          <span>${structure}</span>
         </div>
 
         <div class="design-actions">
-
           <button
             class="design-btn preview"
             type="button"
             data-preview-code="${design.code}"
           >
-            Preview Theme
+            Open Full-Screen Preview
           </button>
-
-          <a
-            class="design-btn"
-            href="${createWhatsAppLink(design)}"
-            target="_blank"
-          >
-            Choose Theme
-          </a>
-
         </div>
 
       </div>
@@ -3337,119 +2339,45 @@ document.getElementById("essentialPageGrid").innerHTML =
 document.getElementById("signaturePageGrid").innerHTML =
   signatureDesigns.map(createDesignCard).join("");
 
-/* PORTFOLIO FILTER */
+/* BACK TO PLANNIQUE */
 
-const portfolioSearch = document.getElementById("portfolioSearch");
-const portfolioEssentialGrid = document.getElementById("portfolioEssentialGrid");
-const portfolioSignatureGrid = document.getElementById("portfolioSignatureGrid");
-const portfolioEssentialSection = document.getElementById("portfolioEssentialSection");
-const portfolioSignatureSection = document.getElementById("portfolioSignatureSection");
-const portfolioEmpty = document.getElementById("portfolioEmpty");
+const PLANNIQUE_URL = "https://evieeviee.github.io/PlanniqueDesignCo/";
 
-let activePortfolioFilter = "all";
+function backToPlannique(){
+  if(window.parent && window.parent !== window){
+    window.parent.postMessage(
+      {type:"plannique-close-collection"},
+      "*"
+    );
+    return;
+  }
 
-function renderPortfolio(){
-  const term = portfolioSearch.value.trim().toLowerCase();
-
-  const filtered = designs.filter(design=>{
-    const searchable = (
-      design.name+" "+
-      design.code+" "+
-      design.file+" "+
-      design.style+" "+
-      design.description+" "+
-      design.tags.join(" ")
-    ).toLowerCase();
-
-    const matchesSearch = searchable.includes(term);
-
-    let matchesFilter = true;
-
-    if(activePortfolioFilter==="essential"){
-      matchesFilter = design.package==="essential";
-    }
-
-    if(activePortfolioFilter==="signature"){
-      matchesFilter = design.package==="signature";
-    }
-
-    if(activePortfolioFilter==="bilingual"){
-      matchesFilter = design.bilingual===true;
-    }
-
-    return matchesSearch && matchesFilter;
-  });
-
-  const essentialFiltered = filtered.filter(
-    design=>design.package==="essential"
-  );
-
-  const signatureFiltered = filtered.filter(
-    design=>design.package==="signature"
-  );
-
-  portfolioEssentialGrid.innerHTML =
-    essentialFiltered.map(createDesignCard).join("");
-
-  portfolioSignatureGrid.innerHTML =
-    signatureFiltered.map(createDesignCard).join("");
-
-  portfolioEssentialSection.style.display =
-    essentialFiltered.length ? "block" : "none";
-
-  portfolioSignatureSection.style.display =
-    signatureFiltered.length ? "block" : "none";
-
-  portfolioEmpty.style.display =
-    filtered.length ? "none" : "block";
-
-  document.getElementById("essentialCount").textContent =
-    `${essentialFiltered.length} ${
-      essentialFiltered.length===1 ? "Template" : "Templates"
-    }`;
-
-  document.getElementById("signatureCount").textContent =
-    `${signatureFiltered.length} ${
-      signatureFiltered.length===1 ? "Template" : "Templates"
-    }`;
-
-  bindPreviewButtons();
+  window.location.href = PLANNIQUE_URL;
 }
 
-document.querySelectorAll(".filter-btn").forEach(button=>{
-  button.addEventListener("click",()=>{
-    document.querySelectorAll(".filter-btn").forEach(item=>{
-      item.classList.remove("active");
-    });
+document.getElementById("backToPlannique").addEventListener(
+  "click",
+  backToPlannique
+);
 
-    button.classList.add("active");
-    activePortfolioFilter = button.dataset.filter;
+document.getElementById("footerBackToPlannique").addEventListener(
+  "click",
+  backToPlannique
+);
 
-    renderPortfolio();
-  });
-});
-
-portfolioSearch.addEventListener("input",renderPortfolio);
-
-/* IFRAME PREVIEW */
+/* FULL-SCREEN IFRAME PREVIEW */
 
 const previewModal = document.getElementById("previewModal");
 const previewFrame = document.getElementById("previewFrame");
-const previewShell = document.getElementById("previewShell");
 const previewThemeName = document.getElementById("previewThemeName");
 const previewThemeMeta = document.getElementById("previewThemeMeta");
-const openFullDemo = document.getElementById("openFullDemo");
-const choosePreviewTheme = document.getElementById("choosePreviewTheme");
 const closePreview = document.getElementById("closePreview");
-
-let activePreviewDesign = null;
-let routeBeforePreview = "portfolio";
 
 function bindPreviewButtons(){
   document
     .querySelectorAll("[data-preview-code]")
     .forEach(button=>{
-      button.onclick=()=>{
+      button.addEventListener("click",()=>{
         const design = designs.find(
           item=>item.code===button.dataset.previewCode
         );
@@ -3457,32 +2385,17 @@ function bindPreviewButtons(){
         if(design){
           openThemePreview(design);
         }
-      };
+      });
     });
 }
 
 function openThemePreview(design){
-  activePreviewDesign = design;
-  routeBeforePreview = getCurrentRoute();
-
   previewThemeName.textContent = design.name;
 
   previewThemeMeta.textContent =
-    `${design.package.toUpperCase()} · ${design.code} · ${design.file}`;
+    `${design.package === "essential" ? "Essential" : "Signature"} · ${design.code}`;
 
   previewFrame.src = design.file;
-  openFullDemo.href = design.file;
-  choosePreviewTheme.href = createWhatsAppLink(design);
-
-  previewShell.className = "preview-shell desktop";
-
-  document.querySelectorAll(".device-btn").forEach(button=>{
-    button.classList.toggle(
-      "active",
-      button.dataset.device==="desktop"
-    );
-  });
-
   previewModal.classList.add("open");
   previewModal.setAttribute("aria-hidden","false");
   document.body.classList.add("modal-open");
@@ -3491,14 +2404,15 @@ function openThemePreview(design){
 function closeThemePreview(){
   previewModal.classList.remove("open");
   previewModal.setAttribute("aria-hidden","true");
-
   document.body.classList.remove("modal-open");
-
   previewFrame.src="";
-  activePreviewDesign=null;
 }
 
 closePreview.addEventListener("click",closeThemePreview);
+
+document
+  .getElementById("backToPlanniqueFromPreview")
+  .addEventListener("click",backToPlannique);
 
 document.addEventListener("keydown",event=>{
   if(event.key==="Escape" && previewModal.classList.contains("open")){
@@ -3506,137 +2420,8 @@ document.addEventListener("keydown",event=>{
   }
 });
 
-document.querySelectorAll(".device-btn").forEach(button=>{
-  button.addEventListener("click",()=>{
-    document.querySelectorAll(".device-btn").forEach(item=>{
-      item.classList.remove("active");
-    });
-
-    button.classList.add("active");
-
-    previewShell.className =
-      `preview-shell ${button.dataset.device}`;
-  });
-});
-
-/* LANGUAGE DEMO */
-
-const languageDemoContent = {
-  en:{
-    eyebrow:"Premium Beauty & Hair Studio",
-    title:"Transforming your beauty with bespoke care.",
-    text:"Experience luxurious hair styling, restorative scalp treatments, and professional nail aesthetics tailored to you.",
-    button:"Book Appointment"
-  },
-
-  zh:{
-    eyebrow:"高端美业与美发沙龙",
-    title:"以精湛美学，定制属于您的闪耀高光。",
-    text:"提供高级发型设计、头皮护理、精美美甲与护肤体验，让您焕发自信魅力。",
-    button:"预约美业体验"
-  }
-};
-
-document
-  .querySelectorAll("[data-demo-language]")
-  .forEach(button=>{
-    button.addEventListener("click",()=>{
-      document
-        .querySelectorAll("[data-demo-language]")
-        .forEach(item=>{
-          item.classList.remove("active");
-        });
-
-      button.classList.add("active");
-
-      const language =
-        languageDemoContent[button.dataset.demoLanguage];
-
-      document.getElementById("demoEyebrow").textContent =
-        language.eyebrow;
-
-      document.getElementById("demoTitle").textContent =
-        language.title;
-
-      document.getElementById("demoText").textContent =
-        language.text;
-
-      document.getElementById("demoButton").textContent =
-        language.button;
-    });
-  });
-
-/* CONTACT FORM */
-
-const themeSelect = document.getElementById("selectedTheme");
-
-themeSelect.innerHTML += designs.map(design=>{
-  const packageName =
-    design.package==="essential"
-      ? "Essential"
-      : "Signature";
-
-  return `
-    <option value="${design.name} (${design.file})">
-      ${design.name} - ${design.file} (${packageName})
-    </option>
-  `;
-}).join("");
-
-document
-  .getElementById("enquiryForm")
-  .addEventListener("submit",event=>{
-    event.preventDefault();
-
-    const name =
-      document.getElementById("customerName").value.trim();
-
-    const business =
-      document.getElementById("businessName").value.trim();
-
-    const packageName =
-      document.getElementById("selectedPackage").value;
-
-    const theme =
-      document.getElementById("selectedTheme").value || "Not selected";
-
-    const language =
-      document.getElementById("languageRequirement").value || "Not selected";
-
-    const message =
-      document.getElementById("customerMessage").value.trim() ||
-      "No additional requirements provided";
-
-    const text =
-`New Beauty & Salon Website Enquiry
-
-Name:
-${name}
-
-Salon or Studio Name:
-${business}
-
-Package Choice:
-${packageName}
-
-Preferred Template:
-${theme}
-
-Language Requirement:
-${language}
-
-Details / Requests:
-${message}`;
-
-    window.open(
-      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`,
-      "_blank"
-    );
-  });
-
-renderPortfolio();
 bindPreviewButtons();
-showPage(getCurrentRoute(),false);
+showPage("essential");
 </script>
 
 </body>
