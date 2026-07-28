@@ -1,29 +1,357 @@
-
-<!--
-CUSTOMISE BEFORE PUBLISHING:
-1. Replace 60123456789 with the salon WhatsApp number, including country code and no + or spaces.
-2. Replace the Google Maps iframe location with the real salon address.
-3. Replace the Google Form placeholder URL with the salon's actual embedded Google Form.
-4. Replace sample names, services, prices, photos and contact details.
--->
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Studio Muse Hair & Beauty</title>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Bodoni+Moda:opsz,wght@6..96,500;6..96,700&display=swap" rel="stylesheet">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Studio Muse Hair & Beauty — creative hair, nail, brow and event styling with easy WhatsApp booking.">
+<meta name="theme-color" content="#1746d1">
+<title>Studio Muse Hair & Beauty</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 <style>
-:root{--yellow:#f1d36b;--ink:#171717;--white:#fff;--grey:#f4f3ef;--green:#25d366}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Archivo,Arial;color:var(--ink);background:#fff;line-height:1.55}a{text-decoration:none;color:inherit}.wrap{width:min(1120px,calc(100% - 32px));margin:auto}
-nav{position:fixed;inset:0 0 auto;z-index:10;background:#fff;border-bottom:2px solid #171717}.nav{height:70px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;font-size:20px}.brand span{background:var(--yellow);padding:3px 7px}.nav-btn{padding:11px 17px;background:#171717;color:#fff}
-.hero{padding-top:70px;min-height:100vh;display:grid;grid-template-columns:1fr 1fr}.hero-copy{padding:90px max(7vw,32px);display:flex;flex-direction:column;justify-content:center;background:var(--yellow)}.mini{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.hero h1{font-family:Bodoni Moda,serif;font-size:clamp(52px,8vw,92px);line-height:.92;margin-top:18px}.hero p{font-size:18px;margin-top:22px;max-width:600px}.buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn{padding:14px 20px;font-weight:800;border:2px solid #171717}.dark{background:#171717;color:#fff}.white{background:#fff}.hero-img{background:url("https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1300&q=85") center/cover}
-section{padding:85px 0}.heading{font-family:Bodoni Moda,serif;font-size:clamp(38px,6vw,64px);line-height:1}.sub{margin-top:15px;max-width:700px;color:#555}
-.service-list{margin-top:35px;border-top:2px solid #171717}.service{display:grid;grid-template-columns:80px 1fr auto;gap:20px;align-items:center;padding:22px 0;border-bottom:2px solid #171717}.number{font-family:Bodoni Moda;font-size:30px}.service h3{font-size:22px}.service p{color:#666;font-size:14px}.service strong{font-size:18px}
-.gallery{background:#171717;color:#fff}.gallery-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin-top:32px}.gallery-grid img{width:100%;height:360px;object-fit:cover}.gallery-grid img:first-child{height:100%}
-.visit{background:var(--grey)}.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:32px}.box{background:#fff;border:2px solid #171717}.info{padding:28px}.info h3{font-family:Bodoni Moda;font-size:34px}.details{display:grid;gap:11px;margin-top:18px}.details div{padding:11px;background:var(--grey)}.map{height:300px}.map iframe,.form iframe{width:100%;height:100%;border:0}.form{padding:26px}.form iframe{height:580px;background:var(--grey)}footer{padding:28px;background:#171717;color:#fff;text-align:center}.float{position:fixed;right:20px;bottom:20px;background:var(--green);color:#fff;padding:14px 18px;font-weight:800}
-@media(max-width:800px){.hero{grid-template-columns:1fr}.hero-img{min-height:470px}.gallery-grid,.visit-grid{grid-template-columns:1fr}.gallery-grid img{height:300px}}@media(max-width:560px){.service{grid-template-columns:50px 1fr}.service strong{grid-column:2}.hero h1{font-size:55px}}
-</style></head><body>
-<nav><div class="wrap nav"><a class="brand" href="#home">STUDIO <span>MUSE</span></a><a class="nav-btn" href="https://wa.me/60123456789?text=Hi%2C%20I%20would%20like%20to%20book%20at%20Studio%20Muse." target="_blank">BOOK NOW</a></div></nav>
-<section class="hero" id="home"><div class="hero-copy"><div class="mini">Hair • Beauty • Creative Styling</div><h1>Your look. Your rules.</h1><p>A bold, modern beauty studio for hair, nails, brows and statement styling.</p><div class="buttons"><a class="btn dark" href="https://wa.me/60123456789?text=Hi%2C%20I%20would%20like%20to%20book%20at%20Studio%20Muse." target="_blank">WHATSAPP BOOKING</a><a class="btn white" href="#services">VIEW SERVICES</a></div></div><div class="hero-img"></div></section>
-<section id="services"><div class="wrap"><h2 class="heading">What we do</h2><p class="sub">A clean service-list layout that is easy for customers to scan.</p><div class="service-list"><div class="service"><div class="number">01</div><div><h3>Cut & Style</h3><p>Consultation, wash, cut and finishing.</p></div><strong>RM45+</strong></div><div class="service"><div class="number">02</div><div><h3>Colour</h3><p>Full colour, highlights and creative colour.</p></div><strong>RM120+</strong></div><div class="service"><div class="number">03</div><div><h3>Nails</h3><p>Gel manicure, extensions and nail art.</p></div><strong>RM38+</strong></div><div class="service"><div class="number">04</div><div><h3>Brows & Lashes</h3><p>Shaping, tinting and lash styling.</p></div><strong>RM35+</strong></div><div class="service"><div class="number">05</div><div><h3>Event Styling</h3><p>Hair and makeup for celebrations.</p></div><strong>Quote</strong></div></div></div></section>
-<section class="gallery"><div class="wrap"><h2 class="heading">Studio energy</h2><div class="gallery-grid"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=85"><img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=700&q=85"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=700&q=85"></div></div></section>
-<section class="visit" id="contact"><div class="wrap"><h2 class="heading">Come see us</h2><div class="visit-grid"><div class="box"><div class="info"><h3>Studio Muse</h3><div class="details"><div>📍 Kuala Lumpur, Malaysia</div><div>🕒 10 AM–8 PM daily</div><div>📞 +60 12-345 6789</div><div>✉️ hello@studiomuse.com</div></div><a class="btn dark" style="display:block;text-align:center;margin-top:18px" href="https://wa.me/60123456789?text=Hi%2C%20I%20would%20like%20to%20book%20at%20Studio%20Muse." target="_blank">BOOK ON WHATSAPP</a></div><div class="map"><iframe src="https://www.google.com/maps?q=Kuala%20Lumpur%20Malaysia&output=embed"></iframe></div></div><div class="box form"><h3 style="font-family:Bodoni Moda;font-size:32px">Appointment Request</h3><p class="sub">Replace the placeholder with the real Google Form.</p><iframe src="https://docs.google.com/forms/d/e/1FAIpQLScEXAMPLEFORMID/viewform?embedded=true"></iframe></div></div></div></section>
-<footer>© 2026 Studio Muse Hair & Beauty.</footer><a class="float" href="https://wa.me/60123456789" target="_blank">WHATSAPP</a>
-</body></html>
+:root{
+  --blue:#1746d1;
+  --red:#ef4c3f;
+  --cream:#f4f0e7;
+  --paper:#fffdf8;
+  --ink:#111111;
+  --muted:#66645f;
+  --line:#171717;
+  --green:#25d366;
+  --shadow:12px 12px 0 #111;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Archivo,Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{display:block;width:100%;object-fit:cover}
+button{font:inherit}
+section{scroll-margin-top:88px}
+.wrap{width:min(1180px,calc(100% - 32px));margin:auto}
+.reveal{opacity:0;transform:translateY(26px);transition:.7s ease}
+.reveal.show{opacity:1;transform:none}
+
+/* NAV */
+.header{position:fixed;inset:0 0 auto;z-index:1000;background:rgba(244,240,231,.95);backdrop-filter:blur(14px);border-bottom:2px solid var(--ink)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.5px}
+.brand-mark{width:46px;height:46px;display:grid;place-items:center;background:var(--blue);color:#fff;border:2px solid var(--ink);border-radius:50% 50% 42% 58%/55% 40% 60% 45%;font-family:"DM Serif Display",serif;font-size:24px}
+.brand-copy small{display:block;font-size:10px;letter-spacing:1.5px;font-weight:700;color:var(--muted)}
+.nav-links{display:flex;align-items:center;gap:24px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.7px}
+.nav-links a:hover{color:var(--blue)}
+.nav-book{padding:11px 16px;background:var(--ink);color:#fff;border:2px solid var(--ink)}
+.menu-btn{display:none;border:2px solid var(--ink);background:var(--red);color:#fff;width:44px;height:44px;font-size:24px;cursor:pointer}
+
+/* HERO */
+.hero{min-height:100vh;padding:120px 0 70px;display:flex;align-items:center;background:
+linear-gradient(90deg,transparent 49.8%,rgba(17,17,17,.11) 50%,transparent 50.2%),
+linear-gradient(rgba(17,17,17,.06) 1px,transparent 1px),
+var(--cream);background-size:auto,100% 40px,auto}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:9px 13px;background:var(--paper);border:2px solid var(--ink);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1.3px;box-shadow:5px 5px 0 var(--ink)}
+.hero h1{font-family:"DM Serif Display",serif;font-size:clamp(62px,8vw,112px);line-height:.84;letter-spacing:-3px;margin-top:28px}
+.hero h1 em{display:block;color:var(--blue);font-weight:400}
+.hero p{margin-top:25px;max-width:620px;font-size:18px;color:#34332f}
+.actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:31px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 21px;border:2px solid var(--ink);font-weight:800;text-transform:uppercase;font-size:13px;letter-spacing:.6px;transition:.22s ease}
+.btn:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--ink)}
+.btn-wa{background:var(--green);color:#fff}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-paper{background:var(--paper)}
+.hero-notes{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.hero-notes span{padding:8px 10px;background:var(--paper);border:1.5px solid var(--ink);font-size:12px;font-weight:700}
+.visual{position:relative;min-height:620px}
+.visual-main{position:absolute;inset:0 30px 40px 0;border:3px solid var(--ink);background:url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1300&q=88') center/cover;box-shadow:14px 14px 0 var(--blue)}
+.visual-badge{position:absolute;right:0;top:38px;width:170px;height:170px;border-radius:50%;display:grid;place-items:center;text-align:center;padding:20px;background:var(--red);color:#fff;border:3px solid var(--ink);font-family:"DM Serif Display",serif;font-size:23px;line-height:1.05;transform:rotate(8deg)}
+.visual-card{position:absolute;left:-20px;bottom:0;max-width:310px;padding:20px;background:var(--paper);border:3px solid var(--ink);box-shadow:10px 10px 0 var(--red)}
+.visual-card strong{font-family:"DM Serif Display",serif;font-size:27px}
+.visual-card span{display:block;margin-top:4px;color:var(--muted);font-size:13px}
+
+/* TICKER */
+.ticker{overflow:hidden;border-block:2px solid var(--ink);background:var(--blue);color:#fff}
+.ticker-track{display:flex;width:max-content;animation:marquee 18s linear infinite}
+.ticker span{padding:15px 24px;font-weight:800;text-transform:uppercase;letter-spacing:1.4px;white-space:nowrap}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* COMMON */
+.section{padding:95px 0}
+.eyebrow{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:2px;color:var(--blue)}
+.heading{margin-top:10px;font-family:"DM Serif Display",serif;font-size:clamp(46px,6vw,78px);line-height:.94;letter-spacing:-1px}
+.lead{margin-top:18px;max-width:720px;color:var(--muted);font-size:17px}
+
+/* SERVICES */
+.services{background:var(--paper)}
+.service-list{margin-top:42px;border-top:3px solid var(--ink)}
+.service{display:grid;grid-template-columns:85px 1fr auto auto;gap:22px;align-items:center;padding:24px 0;border-bottom:3px solid var(--ink)}
+.service-num{font-family:"DM Serif Display",serif;font-size:34px;color:var(--blue)}
+.service h3{font-size:25px}
+.service p{margin-top:4px;color:var(--muted);font-size:14px}
+.service-price{font-size:18px;font-weight:800;white-space:nowrap}
+.service-link{padding:10px 13px;background:var(--red);color:#fff;border:2px solid var(--ink);font-size:11px;font-weight:800;text-transform:uppercase}
+
+/* ABOUT */
+.about{background:var(--ink);color:#fff;overflow:hidden}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about .eyebrow{color:#8ea6ff}
+.about .lead{color:#c7c5bf}
+.about-art{position:relative;min-height:570px}
+.about-art img{position:absolute;width:76%;height:500px;right:0;top:0;border:3px solid #fff}
+.about-tag{position:absolute;left:0;bottom:0;width:250px;padding:24px;background:var(--blue);border:3px solid #fff;box-shadow:12px 12px 0 var(--red)}
+.about-tag strong{font-family:"DM Serif Display",serif;font-size:38px;display:block}
+.points{margin-top:29px;display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.point{padding:15px;border:1.5px solid #4b4b4b;background:#1b1b1b;font-size:14px}
+
+/* GALLERY */
+.gallery-grid{display:grid;grid-template-columns:1.4fr .8fr .8fr;gap:14px;margin-top:38px}
+.gallery-item{position:relative;min-height:340px;overflow:hidden;border:3px solid var(--ink);cursor:pointer;background:#ddd}
+.gallery-item:first-child{grid-row:span 2;min-height:694px}
+.gallery-item img{height:100%;transition:.4s ease}
+.gallery-item:hover img{transform:scale(1.05)}
+.gallery-label{position:absolute;left:12px;bottom:12px;padding:8px 11px;background:var(--paper);border:2px solid var(--ink);font-size:12px;font-weight:800;text-transform:uppercase}
+
+/* REVIEWS */
+.reviews{background:var(--red);color:#fff}
+.reviews .eyebrow{color:#fff3c7}
+.review-grid{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.review{padding:26px;background:var(--paper);color:var(--ink);border:3px solid var(--ink);box-shadow:9px 9px 0 var(--ink)}
+.stars{color:var(--blue);letter-spacing:3px}
+.review p{margin-top:15px;color:#3e3d39}
+.review strong{display:block;margin-top:20px}
+
+/* CONTACT */
+.contact{background:var(--cream)}
+.contact-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:28px;margin-top:40px}
+.contact-card,.map-card{background:var(--paper);border:3px solid var(--ink)}
+.contact-card{padding:30px;box-shadow:10px 10px 0 var(--blue)}
+.contact-card h3{font-family:"DM Serif Display",serif;font-size:42px;line-height:1}
+.info-list{display:grid;gap:12px;margin-top:25px}
+.info-row{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:center;padding:12px;border:1.5px solid var(--ink);background:#f7f3ea}
+.info-icon{width:44px;height:44px;display:grid;place-items:center;background:var(--yellow,#f1d36b);border:1.5px solid var(--ink)}
+.map-card{overflow:hidden;min-height:460px}
+.map-card iframe{width:100%;height:100%;border:0;min-height:460px}
+
+/* FOOTER */
+.footer{padding:44px 0 28px;background:var(--blue);color:#fff;border-top:3px solid var(--ink)}
+.footer-grid{display:grid;grid-template-columns:1.4fr .6fr .6fr;gap:35px}
+.footer h4{margin-bottom:12px;text-transform:uppercase;font-size:12px;letter-spacing:1.4px}
+.footer a{display:block;margin:7px 0;color:#e8ebff;font-size:14px}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.25);display:flex;justify-content:space-between;gap:20px;font-size:12px}
+
+/* FLOAT */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:1001;display:flex;align-items:center;gap:9px;padding:14px 17px;background:var(--green);color:#fff;border:2px solid var(--ink);box-shadow:7px 7px 0 var(--ink);font-weight:800;font-size:13px}
+
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;padding:24px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:min(1050px,92vw);max-height:84vh;width:auto;border:3px solid #fff}
+.lightbox-close{position:absolute;top:18px;right:20px;width:48px;height:48px;border:2px solid #fff;background:var(--red);color:#fff;font-size:26px;cursor:pointer}
+
+@media(max-width:980px){
+  .nav-links{position:absolute;top:76px;left:16px;right:16px;display:none;flex-direction:column;align-items:stretch;padding:20px;background:var(--paper);border:3px solid var(--ink);box-shadow:9px 9px 0 var(--blue)}
+  .nav-links.open{display:flex}
+  .menu-btn{display:block}
+  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .visual{min-height:590px}
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  .gallery-item:first-child{grid-column:1/-1;grid-row:auto;min-height:500px}
+  .review-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:680px){
+  .wrap{width:min(100% - 24px,1180px)}
+  .hero{padding-top:112px}
+  .hero h1{font-size:62px;letter-spacing:-2px}
+  .visual{min-height:470px}
+  .visual-main{inset:0 14px 32px 0}
+  .visual-badge{width:125px;height:125px;font-size:18px;right:-2px}
+  .visual-card{left:0;max-width:235px;padding:16px}
+  .service{grid-template-columns:50px 1fr auto}
+  .service-link{grid-column:2/-1;justify-self:start}
+  .service-price{font-size:16px}
+  .points{grid-template-columns:1fr}
+  .about-art{min-height:450px}
+  .about-art img{width:86%;height:400px}
+  .about-tag{width:210px}
+  .gallery-grid,.review-grid,.footer-grid{grid-template-columns:1fr}
+  .gallery-item,.gallery-item:first-child{min-height:330px;grid-column:auto}
+  .footer-bottom{flex-direction:column}
+  .wa-float{width:58px;height:58px;padding:0;justify-content:center;border-radius:50%}
+  .wa-float span{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="wrap nav">
+    <a class="brand" href="#home">
+      <div class="brand-mark">M</div>
+      <div class="brand-copy">STUDIO MUSE<small>HAIR • BEAUTY • CREATIVE STYLING</small></div>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Visit</a>
+      <a class="nav-book" href="https://wa.me/60168083598?text=Hi%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Studio%20Muse." target="_blank" rel="noopener">Book Now</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <div class="pill">✦ Creative salon energy</div>
+      <h1>Your look.<em>Your rules.</em></h1>
+      <p>Hair, nails, brows and statement styling for people who want something personal, expressive and confidently their own.</p>
+      <div class="actions">
+        <a class="btn btn-wa" href="https://wa.me/60168083598?text=Hi%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Studio%20Muse." target="_blank" rel="noopener">💬 WhatsApp Booking</a>
+        <a class="btn btn-paper" href="#services">View Services</a>
+      </div>
+      <div class="hero-notes">
+        <span>Personal consultation</span>
+        <span>Clear pricing</span>
+        <span>Open daily</span>
+      </div>
+    </div>
+    <div class="visual reveal">
+      <div class="visual-main"></div>
+      <div class="visual-badge">New client special</div>
+      <div class="visual-card"><strong>15% off</strong><span>Selected services on your first visit. Ask us on WhatsApp.</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Cut & Style ✦ Colour ✦ Nails ✦ Brows ✦ Lashes ✦ Event Styling ✦</span>
+    <span>Cut & Style ✦ Colour ✦ Nails ✦ Brows ✦ Lashes ✦ Event Styling ✦</span>
+  </div>
+</div>
+
+<section class="section services" id="services">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">What we do</div>
+      <h2 class="heading">Creative services, clearly presented.</h2>
+      <p class="lead">Sample services and pricing can be replaced with the salon’s actual menu.</p>
+    </div>
+    <div class="service-list">
+      <article class="service reveal"><div class="service-num">01</div><div><h3>Cut & Style</h3><p>Consultation, wash, cut and finishing designed around your everyday routine.</p></div><div class="service-price">RM45+</div><a class="service-link" href="https://wa.me/60168083598?text=Hi%2C%20I%20would%20like%20to%20ask%20about%20Cut%20and%20Style%20at%20Studio%20Muse." target="_blank" rel="noopener">Ask on WhatsApp</a></article>
+      <article class="service reveal"><div class="service-num">02</div><div><h3>Colour Lab</h3><p>Full colour, highlights, toning and creative colour consultation.</p></div><div class="service-price">RM120+</div><a class="service-link" href="https://wa.me/60168083598?text=Hi%2C%20I%20would%20like%20to%20ask%20about%20hair%20colour%20at%20Studio%20Muse." target="_blank" rel="noopener">Ask on WhatsApp</a></article>
+      <article class="service reveal"><div class="service-num">03</div><div><h3>Nail Studio</h3><p>Gel manicure, extensions, minimalist art and statement sets.</p></div><div class="service-price">RM38+</div><a class="service-link" href="https://wa.me/60168083598?text=Hi%2C%20I%20would%20like%20to%20ask%20about%20nail%20services%20at%20Studio%20Muse." target="_blank" rel="noopener">Ask on WhatsApp</a></article>
+      <article class="service reveal"><div class="service-num">04</div><div><h3>Brows & Lashes</h3><p>Shaping, tinting and lash styling selected for your features.</p></div><div class="service-price">RM35+</div><a class="service-link" href="https://wa.me/60168083598?text=Hi%2C%20I%20would%20like%20to%20ask%20about%20brow%20and%20lash%20services%20at%20Studio%20Muse." target="_blank" rel="noopener">Ask on WhatsApp</a></article>
+      <article class="service reveal"><div class="service-num">05</div><div><h3>Event Styling</h3><p>Hair and makeup for celebrations, shoots and important occasions.</p></div><div class="service-price">Quote</div><a class="service-link" href="https://wa.me/60168083598?text=Hi%2C%20I%20would%20like%20a%20quotation%20for%20event%20styling%20at%20Studio%20Muse." target="_blank" rel="noopener">Get Quote</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-art reveal">
+      <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1100&q=88" alt="Modern Studio Muse salon interior">
+      <div class="about-tag"><strong>Bold, not complicated.</strong><span>Easy booking. Friendly care. Strong style.</span></div>
+    </div>
+    <div class="reveal">
+      <div class="eyebrow">Inside Studio Muse</div>
+      <h2 class="heading">A salon made for self-expression.</h2>
+      <p class="lead">We start by listening, then shape each service around your style, maintenance preference and beauty goals.</p>
+      <div class="points">
+        <div class="point">✓ Personal consultation before every service</div>
+        <div class="point">✓ Clean, modern and comfortable environment</div>
+        <div class="point">✓ Transparent pricing and recommendations</div>
+        <div class="point">✓ Simple WhatsApp booking and support</div>
+      </div>
+      <div class="actions"><a class="btn btn-blue" href="https://wa.me/60168083598?text=Hi%2C%20I%20would%20like%20to%20book%20a%20consultation%20at%20Studio%20Muse." target="_blank" rel="noopener">Book a Consultation</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Studio energy</div>
+      <h2 class="heading">Looks, details and creative work.</h2>
+      <p class="lead">Replace these sample images with real salon work, client transformations and studio photography.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal" data-img="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1500&q=90"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=85" alt="Salon styling area"><div class="gallery-label">The Studio</div></div>
+      <div class="gallery-item reveal" data-img="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=1400&q=90"><img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=700&q=85" alt="Hair styling"><div class="gallery-label">Hair</div></div>
+      <div class="gallery-item reveal" data-img="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1400&q=90"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=700&q=85" alt="Nail artwork"><div class="gallery-label">Nails</div></div>
+      <div class="gallery-item reveal" data-img="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1400&q=90"><img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=700&q=85" alt="Hair colour styling"><div class="gallery-label">Colour</div></div>
+      <div class="gallery-item reveal" data-img="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1400&q=90"><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=700&q=85" alt="Beauty service"><div class="gallery-label">Beauty</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section reviews">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">Client notes</div><h2 class="heading">Good energy. Great results.</h2></div>
+    <div class="review-grid">
+      <div class="review reveal"><div class="stars">★★★★★</div><p>“The stylist understood exactly what I wanted and made the whole process feel easy.”</p><strong>— Chloe, Cut & Colour</strong></div>
+      <div class="review reveal"><div class="stars">★★★★★</div><p>“The nail work was clean, creative and lasted beautifully. Booking on WhatsApp was simple.”</p><strong>— Amanda, Nail Studio</strong></div>
+      <div class="review reveal"><div class="stars">★★★★★</div><p>“Friendly team, clear pricing and a very modern salon atmosphere.”</p><strong>— Sarah, Brow Styling</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">Visit Studio Muse</div><h2 class="heading">Come in with an idea. Leave with a look.</h2></div>
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+        <h3>Studio Muse</h3>
+        <p class="lead">Hair • Beauty • Creative Styling</p>
+        <div class="info-list">
+          <div class="info-row"><div class="info-icon">📍</div><div><strong>Address</strong><br><span>Kuala Lumpur, Malaysia</span></div></div>
+          <div class="info-row"><div class="info-icon">🕒</div><div><strong>Opening Hours</strong><br><span>Daily, 10:00 AM–8:00 PM</span></div></div>
+          <div class="info-row"><div class="info-icon">💬</div><div><strong>WhatsApp</strong><br><span>+60 16-808 3598</span></div></div>
+          <div class="info-row"><div class="info-icon">✉️</div><div><strong>Email</strong><br><span>hello@studiomuse.com</span></div></div>
+        </div>
+        <div class="actions"><a class="btn btn-wa" style="width:100%" href="https://wa.me/60168083598?text=Hi%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Studio%20Muse." target="_blank" rel="noopener">Book Through WhatsApp</a></div>
+      </div>
+      <div class="map-card reveal"><iframe src="https://www.google.com/maps?q=Kuala%20Lumpur%20Malaysia&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Studio Muse location"></iframe></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><div class="brand"><div class="brand-mark" style="background:var(--red)">M</div><div class="brand-copy">STUDIO MUSE<small style="color:#dce2ff">HAIR • BEAUTY • CREATIVE STYLING</small></div></div><p style="margin-top:16px;max-width:430px;color:#e8ebff">A bold, modern beauty studio for hair, nails, brows and statement styling.</p></div>
+      <div><h4>Explore</h4><a href="#services">Services</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#contact">Visit</a></div>
+      <div><h4>Contact</h4><a href="https://wa.me/60168083598" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:hello@studiomuse.com">Email</a><a href="#contact">Google Map</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Studio Muse Hair & Beauty.</span><span>One-page Essential website concept.</span></div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/60168083598?text=Hi%2C%20I%20would%20like%20to%20ask%20about%20Studio%20Muse%20services." target="_blank" rel="noopener" aria-label="Chat with Studio Muse on WhatsApp">💬 <span>WhatsApp</span></a>
+
+<div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" id="lightboxClose" aria-label="Close image">×</button><img id="lightboxImg" src="" alt="Expanded salon gallery image"></div>
+
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const navLinks=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open);menuBtn.textContent=open?'×':'☰'});
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰'}));
+
+const revealObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show');revealObserver.unobserve(entry.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+
+const lightbox=document.getElementById('lightbox');
+const lightboxImg=document.getElementById('lightboxImg');
+const lightboxClose=document.getElementById('lightboxClose');
+document.querySelectorAll('.gallery-item').forEach(item=>item.addEventListener('click',()=>{lightboxImg.src=item.dataset.img;lightbox.classList.add('open');lightbox.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}));
+function closeLightbox(){lightbox.classList.remove('open');lightbox.setAttribute('aria-hidden','true');document.body.style.overflow=''}
+lightboxClose.addEventListener('click',closeLightbox);
+lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
+</script>
+</body>
+</html>
