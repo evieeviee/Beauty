@@ -2,706 +2,150 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Aurelia Beauty Atelier — luxury salon, spa and aesthetic treatments with online appointment enquiry and WhatsApp booking.">
-<title>Aurelia Beauty Atelier</title>
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Aurelia Beauty Atelier — private beauty consultations, couture treatments, curated rituals and WhatsApp reservations.">
+<title>Aurelia Beauty Atelier | Signature Private Beauty Club</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Italiana&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Bodoni+Moda:opsz,wght@6..96,500;6..96,700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --black:#0b0a09;
-  --charcoal:#171411;
-  --gold:#c8a15e;
-  --gold-soft:#e2c890;
-  --cream:#f6f0e7;
-  --paper:#fff;
-  --ink:#1f1b17;
-  --muted:#766f66;
-  --green:#25d366;
-  --line:#ddd1bf;
-  --shadow:0 28px 80px rgba(38,28,18,.18);
+  --ink:#12100f;--wine:#5e1d2c;--ruby:#a3364e;--champagne:#e4c893;--ivory:#f7f1e7;
+  --porcelain:#fffdf8;--mist:#dce8ea;--muted:#766d68;--line:#d8cec1;--green:#25d366;
+  --shadow:0 30px 90px rgba(18,16,15,.18)
 }
-
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{
-  font-family:"Inter",Arial,sans-serif;
-  background:var(--cream);
-  color:var(--ink);
-  line-height:1.65;
-  overflow-x:hidden;
-}
-a{text-decoration:none;color:inherit}
-img{display:block;max-width:100%}
-button{font:inherit}
-section{scroll-margin-top:90px}
-.container{width:min(1220px,calc(100% - 40px));margin:auto}
-.section{padding:110px 0}
-.kicker{
-  color:#9a743b;
-  text-transform:uppercase;
-  letter-spacing:3px;
-  font-size:11px;
-  font-weight:800;
-}
-.title{
-  margin-top:14px;
-  font-family:"Italiana",serif;
-  font-size:clamp(42px,5.5vw,68px);
-  line-height:1.05;
-  font-weight:400;
-}
-.copy{margin-top:18px;color:var(--muted);max-width:760px}
-
-/* NAV */
-.navbar{
-  position:fixed;
-  inset:0 0 auto;
-  z-index:1000;
-  background:rgba(11,10,9,.9);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid rgba(200,161,94,.18);
-}
-.nav{
-  height:80px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  color:#fff;
-}
-.brand{
-  display:flex;
-  align-items:center;
-  gap:13px;
-  font-weight:700;
-  letter-spacing:.7px;
-}
-.mark{
-  width:46px;
-  height:46px;
-  display:grid;
-  place-items:center;
-  border:1px solid var(--gold);
-  color:var(--gold-soft);
-  transform:rotate(45deg);
-}
-.mark span{transform:rotate(-45deg);font-family:"Italiana",serif;font-size:22px}
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:24px;
-  font-size:13px;
-  font-weight:700;
-}
-.nav-links a{color:#d6d0c7}
-.nav-links a:hover{color:#fff}
-.nav-links .book{
-  padding:12px 18px;
-  border:1px solid var(--gold);
-  color:var(--gold-soft);
-}
-.menu{
-  display:none;
-  color:#fff;
-  background:none;
-  border:0;
-  font-size:28px;
-}
-
-/* HERO */
-.hero{
-  min-height:100vh;
-  padding:140px 0 90px;
-  position:relative;
-  overflow:hidden;
-  color:#fff;
-  background:
-    radial-gradient(circle at 78% 20%,rgba(190,144,64,.14),transparent 28%),
-    radial-gradient(circle at 8% 85%,rgba(148,105,44,.12),transparent 30%),
-    var(--black);
-}
-.hero:before{
-  content:"";
-  position:absolute;
-  width:520px;
-  height:520px;
-  right:-230px;
-  top:-180px;
-  border:1px solid rgba(205,167,98,.18);
-  transform:rotate(35deg);
-}
-.hero-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:72px;
-  align-items:center;
-}
-.hero h1{
-  margin-top:22px;
-  font-family:"Italiana",serif;
-  font-size:clamp(58px,8vw,96px);
-  line-height:.96;
-  font-weight:400;
-}
-.hero h1 span{color:var(--gold-soft)}
-.hero p{
-  margin-top:26px;
-  max-width:680px;
-  color:#bdb6ac;
-  font-size:18px;
-}
-.actions{
-  margin-top:36px;
-  display:flex;
-  flex-wrap:wrap;
-  gap:14px;
-}
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  padding:16px 24px;
-  font-weight:800;
-  transition:.25s;
-}
-.btn:hover{transform:translateY(-3px)}
-.btn-gold{background:linear-gradient(135deg,#e2c890,#a97a35);color:#15110c}
-.btn-wa{border:1px solid var(--green);color:#63e394}
-.hero-stats{
-  margin-top:40px;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:15px;
-}
-.stat{
-  padding:18px 0;
-  border-top:1px solid rgba(201,161,94,.38);
-}
-.stat strong{
-  display:block;
-  color:var(--gold-soft);
-  font-family:"Italiana",serif;
-  font-size:30px;
-}
-.stat span{color:#8f8980;font-size:12px}
-
-.visual{
-  position:relative;
-  min-height:620px;
-}
-.main-photo{
-  position:absolute;
-  top:0;
-  right:0;
-  width:88%;
-  height:570px;
-  background:
-    linear-gradient(to top,rgba(0,0,0,.58),transparent 55%),
-    url("https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1300&q=85") center/cover;
-  clip-path:polygon(12% 0,100% 0,100% 88%,88% 100%,0 100%,0 12%);
-  box-shadow:0 30px 90px rgba(0,0,0,.58);
-}
-.frame{
-  position:absolute;
-  top:34px;
-  right:34px;
-  width:88%;
-  height:570px;
-  border:1px solid rgba(210,171,99,.5);
-  clip-path:polygon(12% 0,100% 0,100% 88%,88% 100%,0 100%,0 12%);
-}
-.visual-card{
-  position:absolute;
-  left:0;
-  bottom:0;
-  width:290px;
-  padding:28px;
-  background:rgba(17,17,17,.94);
-  border:1px solid rgba(208,169,96,.4);
-}
-.visual-card small{color:var(--gold-soft);text-transform:uppercase;letter-spacing:2px}
-.visual-card h3{margin-top:10px;font-family:"Italiana",serif;font-size:31px;font-weight:400}
-.visual-card p{margin-top:10px;color:#aaa399;font-size:13px}
-
-/* INTRO */
-.intro-grid{
-  display:grid;
-  grid-template-columns:.9fr 1.1fr;
-  gap:70px;
-  align-items:center;
-}
-.intro-media{
-  position:relative;
-  min-height:620px;
-}
-.intro-media img:first-child{
-  position:absolute;
-  inset:0 auto auto 0;
-  width:76%;
-  height:540px;
-  object-fit:cover;
-}
-.intro-media img:last-child{
-  position:absolute;
-  right:0;
-  bottom:0;
-  width:48%;
-  height:300px;
-  object-fit:cover;
-  border:12px solid var(--cream);
-}
-.signature{
-  margin-top:28px;
-  color:#9a743b;
-  font-family:"Italiana",serif;
-  font-size:28px;
-}
-
-/* TREATMENTS */
-.treatments{background:var(--charcoal);color:#fff}
-.treatment-grid{
-  margin-top:48px;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-.treatment{
-  position:relative;
-  overflow:hidden;
-  min-height:390px;
-  padding:28px;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-end;
-  border:1px solid rgba(255,255,255,.1);
-}
-.treatment:before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(to top,rgba(0,0,0,.9),rgba(0,0,0,.08));
-}
-.treatment>*{position:relative;z-index:2}
-.treatment h3{
-  font-family:"Italiana",serif;
-  font-size:33px;
-  font-weight:400;
-}
-.treatment p{margin-top:10px;color:#cec7be;font-size:14px}
-.treatment strong{margin-top:16px;color:var(--gold-soft)}
-.t1{background:url("https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=900&q=85") center/cover}
-.t2{background:url("https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=900&q=85") center/cover}
-.t3{background:url("https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=85") center/cover}
-.t4{background:url("https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=900&q=85") center/cover}
-.t5{background:url("https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=900&q=85") center/cover}
-.t6{background:url("https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=85") center/cover}
-
-/* EXPERIENCE */
-.experience-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px;
-  margin-top:44px;
-}
-.experience-card{
-  padding:26px;
-  border:1px solid var(--line);
-  background:#fff;
-}
-.experience-card span{
-  color:#9a743b;
-  font-family:"Italiana",serif;
-  font-size:42px;
-}
-.experience-card h3{margin-top:10px}
-.experience-card p{margin-top:8px;color:var(--muted);font-size:14px}
-
-/* JOURNAL */
-.journal{background:#e9dfd0}
-.journal-grid{
-  margin-top:44px;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-.article{
-  background:#fff;
-  overflow:hidden;
-}
-.article img{
-  width:100%;
-  height:250px;
-  object-fit:cover;
-}
-.article-body{padding:24px}
-.article small{color:#9a743b;text-transform:uppercase;letter-spacing:1.5px;font-weight:800}
-.article h3{
-  margin-top:10px;
-  font-family:"Italiana",serif;
-  font-size:28px;
-  font-weight:400;
-}
-.article p{margin-top:10px;color:var(--muted);font-size:14px}
-
-/* REVIEWS */
-.reviews{background:var(--black);color:#fff}
-.review-grid{
-  margin-top:44px;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-.review{
-  padding:28px;
-  border:1px solid rgba(255,255,255,.1);
-  background:#11100f;
-}
-.stars{color:var(--gold-soft);letter-spacing:3px}
-.review p{margin-top:16px;color:#d0c8bd}
-.review strong{display:block;margin-top:20px}
-
-/* CONTACT */
-.contact-grid{
-  display:grid;
-  grid-template-columns:.9fr 1.1fr;
-  gap:24px;
-  margin-top:46px;
-}
-.contact-card,.form-card{
-  background:#fff;
-  box-shadow:var(--shadow);
-}
-.contact-info{padding:36px}
-.contact-info h3,.form-card h3{
-  font-family:"Italiana",serif;
-  font-size:40px;
-  font-weight:400;
-}
-.info{
-  margin-top:24px;
-  display:grid;
-  gap:12px;
-}
-.info div{
-  padding:15px;
-  background:#f0e8dc;
-}
-.map{height:360px}
-.map iframe,.form-card iframe{width:100%;height:100%;border:0}
-.form-card{padding:30px}
-.form-card iframe{
-  margin-top:18px;
-  height:720px;
-  background:#eee5d7;
-}
-
-/* FOOTER */
-.footer{
-  padding:55px 0 30px;
-  background:#070706;
-  color:#a9a198;
-}
-.footer-grid{
-  display:grid;
-  grid-template-columns:1.2fr .8fr .8fr;
-  gap:40px;
-}
-.footer h4{color:#fff}
-.footer a{display:block;margin:9px 0}
-.footer-bottom{
-  margin-top:34px;
-  padding-top:22px;
-  border-top:1px solid rgba(255,255,255,.08);
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  font-size:13px;
-}
-.wa-float{
-  position:fixed;
-  right:22px;
-  bottom:22px;
-  z-index:1001;
-  display:flex;
-  align-items:center;
-  gap:10px;
-  padding:14px 18px;
-  border-radius:999px;
-  background:var(--green);
-  color:#fff;
-  font-weight:800;
-}
-
-@media(max-width:960px){
-  .nav-links{
-    position:absolute;
-    top:80px;
-    left:20px;
-    right:20px;
-    display:none;
-    flex-direction:column;
-    align-items:flex-start;
-    padding:20px;
-    background:#111;
-  }
-  .nav-links.open{display:flex}
-  .menu{display:block}
-  .hero-grid,.intro-grid,.contact-grid{grid-template-columns:1fr}
-  .treatment-grid,.journal-grid,.review-grid{grid-template-columns:1fr 1fr}
-  .experience-grid{grid-template-columns:1fr 1fr}
-}
-@media(max-width:620px){
-  .section{padding:80px 0}
-  .hero h1{font-size:58px}
-  .visual{min-height:560px}
-  .main-photo,.frame{width:94%;height:500px}
-  .visual-card{width:240px}
-  .treatment-grid,.journal-grid,.review-grid,.experience-grid{grid-template-columns:1fr}
-  .intro-media{min-height:520px}
-  .footer-grid{grid-template-columns:1fr}
-  .footer-bottom{flex-direction:column}
-  .wa-float{width:62px;height:62px;padding:0;justify-content:center;border-radius:50%}
-  .wa-float span{display:none}
-}
+body{font-family:Manrope,Arial,sans-serif;background:var(--ivory);color:var(--ink);overflow-x:hidden}
+a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}img{display:block;width:100%;object-fit:cover}
+.wrap{width:min(1240px,calc(100% - 36px));margin:auto}
+header{position:fixed;inset:0 0 auto;z-index:1000;background:rgba(247,241,231,.88);backdrop-filter:blur(18px);border-bottom:1px solid rgba(18,16,15,.1)}
+.nav{height:82px;display:flex;align-items:center;justify-content:space-between}.brand{font-family:"Bodoni Moda";font-size:25px;font-weight:700;letter-spacing:.5px}
+.brand b{color:var(--wine)}.links{display:flex;align-items:center;gap:21px;font-size:13px;font-weight:800}.links button,.menuBtn{border:0;background:none;cursor:pointer}
+.links .book{padding:12px 18px;background:var(--wine);color:#fff;border-radius:999px}.menuBtn{display:none;font-size:27px}
+.page{display:none;min-height:100vh;padding-top:82px}.page.active{display:block;animation:pageIn .65s cubic-bezier(.2,.7,.2,1) both}
+@keyframes pageIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.hero{min-height:calc(100vh - 82px);display:grid;grid-template-columns:.94fr 1.06fr;overflow:hidden}
+.hero-copy{padding:90px max(5vw,28px);display:flex;flex-direction:column;justify-content:center;background:
+linear-gradient(145deg,#f7f1e7 0 57%,#e9ded0 57% 100%);position:relative}
+.hero-copy:before{content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(94,29,44,.18);border-radius:50%;right:-220px;top:-180px;animation:spin 24s linear infinite}
+.hero-copy:after{content:"";position:absolute;width:250px;height:250px;background:var(--mist);border-radius:50%;left:-110px;bottom:-70px;filter:blur(12px);opacity:.75;animation:drift 9s ease-in-out infinite alternate}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes drift{to{transform:translate(85px,-25px) scale(1.12)}}
+.kicker{position:relative;font-size:11px;letter-spacing:2.6px;text-transform:uppercase;font-weight:800;color:var(--ruby)}
+.hero h1,.display{font-family:"Bodoni Moda";line-height:.93;letter-spacing:-2px}.hero h1{position:relative;font-size:clamp(62px,8vw,112px);margin-top:18px}
+.hero h1 span{color:var(--wine);font-style:italic}.hero p{position:relative;margin-top:24px;max-width:650px;color:#615957;font-size:18px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px;position:relative}.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 22px;border-radius:999px;font-weight:800;border:1px solid var(--ink);transition:.25s}
+.btn:hover{transform:translateY(-4px)}.dark{background:var(--ink);color:#fff}.wine{background:var(--wine);color:#fff;border-color:var(--wine)}.wa{background:var(--green);color:#fff;border-color:var(--green)}.light{background:#fff}
+.hero-media{position:relative;background:var(--wine);overflow:hidden}.hero-media img{height:100%;min-height:710px;animation:zoom 15s ease-in-out infinite alternate}
+@keyframes zoom{to{transform:scale(1.1)}}.seal{position:absolute;top:28px;right:28px;width:120px;height:120px;border-radius:50%;background:var(--champagne);display:grid;place-items:center;text-align:center;font-family:"Bodoni Moda";font-size:17px;line-height:1.1;animation:spin 18s linear infinite}
+.hero-note{position:absolute;left:24px;bottom:24px;max-width:300px;padding:22px;background:rgba(255,253,248,.9);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.4);box-shadow:var(--shadow)}
+.hero-note strong{display:block;font-family:"Bodoni Moda";font-size:26px}.hero-note span{font-size:13px;color:var(--muted)}
+.marquee{overflow:hidden;background:var(--wine);color:#fff;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.track{display:flex;width:max-content;animation:marquee 22s linear infinite;padding:13px 0;font-weight:800;letter-spacing:1.4px}.track span{padding:0 30px}
+@keyframes marquee{to{transform:translateX(-50%)}}
+.section{padding:100px 0}.display{font-size:clamp(46px,6vw,80px)}.copy{margin-top:16px;max-width:740px;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}.editorial{height:620px;box-shadow:var(--shadow)}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:32px}.metric{padding:24px;background:#fff;border:1px solid var(--line)}.metric:nth-child(2){background:#f0e2e5}.metric:nth-child(3){background:var(--mist)}.metric:nth-child(4){background:#f5e9ce}
+.metric b{font-family:"Bodoni Moda";font-size:36px;color:var(--wine)}.metric span{display:block;font-size:12px;color:#625b58}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin:30px 0}.filter{padding:10px 15px;border:1px solid var(--ink);background:transparent;border-radius:999px;font-weight:800;cursor:pointer}.filter.active{background:var(--wine);color:#fff;border-color:var(--wine)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{position:relative;background:#fff;border:1px solid var(--line);padding:28px;overflow:hidden;transition:.3s}
+.card:after{content:"";position:absolute;width:130px;height:130px;border-radius:50%;right:-55px;bottom:-70px;background:#f0d4da}.card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.card small{color:var(--ruby);font-weight:800}.card h3{font-family:"Bodoni Moda";font-size:28px;margin-top:10px}.card p{color:var(--muted);font-size:14px;margin-top:9px}.meta{display:flex;justify-content:space-between;margin-top:22px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;font-weight:800}.card a{display:inline-block;margin-top:16px;color:var(--wine);font-weight:800;position:relative;z-index:2}
+.curator{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;margin-top:34px}.curator-panel{padding:30px;background:#fff;border:1px solid var(--line)}.curator-panel select{width:100%;padding:14px;border:1px solid var(--line);margin-top:10px}.recommend{padding:30px;background:#efe2e5;border:1px solid #caaeb5}.recommend h3{font-family:"Bodoni Moda";font-size:36px}.recommend p{margin-top:10px}
+.memberships{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.membership{padding:30px;background:#fff;border:1px solid var(--line)}.membership.featured{background:var(--wine);color:#fff;transform:translateY(-10px)}.membership h3{font-family:"Bodoni Moda";font-size:32px;margin-top:10px}.membership .price{font-size:40px;font-weight:800;margin-top:16px}.membership ul{display:grid;gap:10px;margin-top:22px;padding-left:18px}.membership .btn{width:100%;margin-top:24px}
+.team{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.member{background:#fff;border:1px solid var(--line);overflow:hidden}.member img{height:380px}.member div{padding:20px}.member h3{font-family:"Bodoni Moda";font-size:25px}.member p{color:var(--ruby);font-weight:800}.socials{display:flex;gap:9px;margin-top:13px}.socials a{padding:7px 10px;border:1px solid var(--line);border-radius:999px;font-size:11px;font-weight:800}
+.events{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.event{min-height:430px;padding:28px;display:flex;align-items:flex-end;color:#fff;background-size:cover;background-position:center;position:relative;overflow:hidden}.event:before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(18,10,12,.88),transparent 68%)}.event div{position:relative}.event h3{font-family:"Bodoni Moda";font-size:34px}.event p{color:#e1d9dc;margin-top:8px}.event a{display:inline-block;margin-top:15px;color:var(--champagne);font-weight:800}
+.social-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}.social-item{position:relative;overflow:hidden}.social-item:nth-child(1){grid-column:span 7}.social-item:nth-child(2){grid-column:span 5}.social-item:nth-child(n+3){grid-column:span 4}.social-item img{height:320px;transition:.35s}.social-item:hover img{transform:scale(1.07)}.social-item span{position:absolute;left:12px;bottom:12px;background:#fff;padding:7px 10px;border-radius:999px;font-size:11px;font-weight:800}
+.journal{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.post{background:#fff;border:1px solid var(--line);overflow:hidden}.post img{height:240px}.post div{padding:20px}.post h3{font-family:"Bodoni Moda";font-size:24px}.post p{color:var(--muted);font-size:14px;margin-top:8px}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px}.panel{background:#fff;border:1px solid var(--line);overflow:hidden;box-shadow:var(--shadow)}.info{padding:30px}.details{display:grid;gap:12px;margin-top:22px}.details div{padding:14px;background:#f2ece5}.map{height:430px}.map iframe{width:100%;height:100%;border:0}
+.planner{margin-top:28px;padding:28px;background:#f0e2e5;border:1px solid #c7adb3}.planner-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.planner input,.planner select,.planner textarea{width:100%;padding:13px;border:1px solid #c9b7ba}.planner textarea{grid-column:1/-1;min-height:110px}
+footer{padding:44px 0;background:var(--ink);color:#cbc3c3}.footer-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:34px}.footer-grid h4{color:#fff;margin-bottom:12px}.footer-grid a{display:block;margin:8px 0}.bottom{margin-top:28px;padding-top:20px;border-top:1px solid #393235;font-size:12px}
+.float{position:fixed;right:20px;bottom:20px;z-index:1200;background:var(--green);color:#fff;padding:14px 18px;border-radius:999px;font-weight:800;box-shadow:0 15px 35px rgba(37,211,102,.35)}
+@media(max-width:1000px){.links{display:none}.menuBtn{display:block}.links.open{display:flex;position:absolute;top:82px;left:18px;right:18px;flex-direction:column;align-items:flex-start;background:#fff;padding:22px;box-shadow:var(--shadow)}
+.hero,.grid2,.curator,.contact-grid{grid-template-columns:1fr}.hero-media img{min-height:540px}.cards,.memberships,.events,.journal{grid-template-columns:1fr 1fr}.team{grid-template-columns:1fr 1fr}.metrics{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.hero-copy{padding:70px 22px}.hero h1{font-size:60px}.cards,.memberships,.events,.journal,.team,.metrics,.footer-grid{grid-template-columns:1fr}.social-grid{grid-template-columns:1fr}.social-item,.social-item:nth-child(n){grid-column:auto}.planner-grid{grid-template-columns:1fr}.planner textarea{grid-column:auto}.membership.featured{transform:none}.float{width:58px;height:58px;padding:0;display:grid;place-items:center;font-size:0}.float:after{content:"💬";font-size:22px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
-
 <body>
-
-<header class="navbar">
-  <div class="container nav">
-    <a href="#home" class="brand">
-      <div class="mark"><span>A</span></div>
-      <div>AURELIA BEAUTY ATELIER</div>
-    </a>
-
-    <nav class="nav-links" id="navLinks">
-      <a href="#about">Our Story</a>
-      <a href="#treatments">Treatments</a>
-      <a href="#experience">Experience</a>
-      <a href="#journal">Journal</a>
-      <a href="#contact">Contact</a>
-      <a class="book" href="https://wa.me/60123456789?text=Hi%2C%20I%20would%20like%20to%20book%20a%20consultation%20at%20Aurelia%20Beauty%20Atelier." target="_blank">Book Consultation</a>
-    </nav>
-
-    <button class="menu" id="menuBtn">☰</button>
-  </div>
-</header>
+<header><div class="wrap nav"><button class="brand route" data-page="home">AURELIA <b>ATELIER</b></button><nav class="links" id="links">
+<button class="route" data-page="home">Home</button><button class="route" data-page="rituals">Rituals</button><button class="route" data-page="curator">Beauty Curator</button><button class="route" data-page="membership">Private Club</button><button class="route" data-page="specialists">Specialists</button><button class="route" data-page="occasions">Occasions</button><button class="route" data-page="journal">Journal</button><button class="route book" data-page="visit">Reserve</button></nav><button class="menuBtn" id="menuBtn">☰</button></div></header>
 
 <main>
-
-<section class="hero" id="home">
-  <div class="container hero-grid">
-    <div>
-      <div class="kicker" style="color:var(--gold-soft)">Luxury beauty, personalised</div>
-      <h1>Where beauty becomes an <span>experience.</span></h1>
-      <p>
-        Aurelia is a refined beauty atelier offering advanced facial care,
-        signature hair services, nail artistry and personalised wellness rituals
-        in an elegant, private setting.
-      </p>
-
-      <div class="actions">
-        <a class="btn btn-gold" href="#treatments">Explore Treatments</a>
-        <a class="btn btn-wa" href="https://wa.me/60123456789?text=Hi%2C%20I%20would%20like%20to%20book%20a%20consultation%20at%20Aurelia%20Beauty%20Atelier." target="_blank">💬 WhatsApp Consultation</a>
-      </div>
-
-      <div class="hero-stats">
-        <div class="stat"><strong>10+</strong><span>Years of expertise</span></div>
-        <div class="stat"><strong>30+</strong><span>Curated treatments</span></div>
-        <div class="stat"><strong>4.9★</strong><span>Client satisfaction</span></div>
-      </div>
-    </div>
-
-    <div class="visual">
-      <div class="frame"></div>
-      <div class="main-photo"></div>
-      <div class="visual-card">
-        <small>Signature ritual</small>
-        <h3>A moment created entirely for you.</h3>
-        <p>Consultation-led treatments, calm surroundings and attentive professional care.</p>
-      </div>
-    </div>
-  </div>
+<section class="page active" data-view="home">
+<div class="hero"><div class="hero-copy"><div class="kicker">Private beauty club · Kuala Lumpur</div><h1>Beauty,<br><span>personally curated.</span></h1><p>Aurelia combines hair, skin, nails and event preparation into considered beauty journeys designed around you.</p><div class="actions"><button class="btn dark route" data-page="curator">Use Beauty Curator</button><a class="btn wa" target="_blank" href="https://wa.me/60168083598?text=Hi%2C%20I%20would%20like%20to%20book%20a%20private%20consultation%20at%20Aurelia%20Beauty%20Atelier.">WhatsApp Consultation</a></div></div>
+<div class="hero-media"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1500&q=88" alt="Aurelia private beauty treatment"><div class="seal">PRIVATE<br>BEAUTY<br>CLUB</div><div class="hero-note"><strong>Aurelia Signature Session</strong><span>One consultation. A complete treatment plan across hair, skin and beauty.</span></div></div></div>
+<div class="marquee"><div class="track"><span>PRIVATE CONSULTATION ✦ COUTURE TREATMENTS ✦ EVENT BEAUTY ✦</span><span>PRIVATE CONSULTATION ✦ COUTURE TREATMENTS ✦ EVENT BEAUTY ✦</span></div></div>
+<section class="section"><div class="wrap grid2"><div><div class="kicker">The Aurelia philosophy</div><h2 class="display">Beauty care with a point of view.</h2><p class="copy">Clients do not need to understand every treatment before booking. Our role is to listen, curate and explain a plan that feels practical, personal and refined.</p><div class="metrics"><div class="metric"><b>10+</b><span>Years expertise</span></div><div class="metric"><b>30+</b><span>Curated treatments</span></div><div class="metric"><b>4.9★</b><span>Client rating</span></div><div class="metric"><b>1:1</b><span>Private consultation</span></div></div></div><img class="editorial" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=85" alt="Aurelia beauty atelier"></div></section>
 </section>
 
-<section class="section" id="about">
-  <div class="container intro-grid">
-    <div class="intro-media">
-      <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=85" alt="Luxury salon">
-      <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=700&q=85" alt="Beauty treatment">
-    </div>
+<section class="page" data-view="rituals"><section class="section"><div class="wrap"><div class="kicker">Ritual Menu</div><h1 class="display">Choose by category.</h1><div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="skin">Skin</button><button class="filter" data-filter="hair">Hair</button><button class="filter" data-filter="beauty">Beauty</button></div><div class="cards">
+<article class="card" data-cat="skin"><small>SKIN</small><h3>Radiance Ceremony</h3><p>Consultation-led hydration and glow treatment.</p><div class="meta"><span>90 min</span><span>RM238</span></div><a target="_blank" href="https://wa.me/60168083598?text=Hi%2C%20I%20would%20like%20to%20ask%20about%20Radiance%20Ceremony.">Ask about this →</a></article>
+<article class="card" data-cat="skin"><small>SKIN</small><h3>Barrier Repose</h3><p>Gentle care designed for comfort and calm.</p><div class="meta"><span>75 min</span><span>RM218</span></div><a target="_blank" href="https://wa.me/60168083598?text=Hi%2C%20I%20would%20like%20to%20ask%20about%20Barrier%20Repose.">Ask about this →</a></article>
+<article class="card" data-cat="hair"><small>HAIR</small><h3>Couture Colour</h3><p>Personalised tone, dimensional colour and finishing.</p><div class="meta"><span>180 min</span><span>From RM320</span></div><a target="_blank" href="https://wa.me/60168083598?text=Hi%2C%20I%20would%20like%20to%20ask%20about%20Couture%20Colour.">Ask about this →</a></article>
+<article class="card" data-cat="hair"><small>HAIR</small><h3>Signature Cut</h3><p>Consultation, wash, precision cut and styling.</p><div class="meta"><span>75 min</span><span>From RM98</span></div><a target="_blank" href="https://wa.me/60168083598?text=Hi%2C%20I%20would%20like%20to%20ask%20about%20Signature%20Cut.">Ask about this →</a></article>
+<article class="card" data-cat="beauty"><small>NAILS</small><h3>Atelier Gel Set</h3><p>Refined gel manicure with custom finish options.</p><div class="meta"><span>90 min</span><span>From RM108</span></div><a target="_blank" href="https://wa.me/60168083598?text=Hi%2C%20I%20would%20like%20to%20ask%20about%20Atelier%20Gel%20Set.">Ask about this →</a></article>
+<article class="card" data-cat="beauty"><small>BRIDAL</small><h3>Wedding Atelier</h3><p>Hair, makeup and personalised preparation timeline.</p><div class="meta"><span>Custom</span><span>Proposal</span></div><a target="_blank" href="https://wa.me/60168083598?text=Hi%2C%20I%20would%20like%20to%20ask%20about%20Wedding%20Atelier.">Ask about this →</a></article>
+</div></div></section></section>
 
-    <div>
-      <div class="kicker">Our Philosophy</div>
-      <h2 class="title">Thoughtful beauty, never rushed</h2>
-      <p class="copy">
-        We believe the finest beauty experience begins with understanding.
-        Every appointment starts with a detailed consultation so our specialists
-        can recommend the right treatment, technique and aftercare for you.
-      </p>
-      <p class="copy">
-        From the first welcome to the final finishing touch, every detail is
-        designed to feel calm, private and considered.
-      </p>
-      <div class="signature">Aurelia</div>
-    </div>
-  </div>
-</section>
+<section class="page" data-view="curator"><section class="section"><div class="wrap"><div class="kicker">Beauty Curator</div><h1 class="display">Start with your goal.</h1><p class="copy">This tool recommends a useful starting journey instead of asking clients to guess a treatment name.</p><div class="curator"><div class="curator-panel"><label><strong>Your priority</strong></label><select id="goal"><option value="skin">Improve skin hydration and glow</option><option value="hair">Refresh my hair and colour</option><option value="event">Prepare for an event</option><option value="routine">Build a maintenance routine</option></select><label style="display:block;margin-top:18px"><strong>Preferred visit style</strong></label><select id="style"><option value="single">One focused appointment</option><option value="half">Half-day beauty session</option><option value="plan">Multi-visit plan</option></select><button class="btn wine" id="curateBtn" style="margin-top:20px">Curate My Journey</button></div><div class="recommend"><div class="kicker">Suggested journey</div><h3 id="recTitle">Radiance Ceremony</h3><p id="recCopy">A consultation-led facial focused on hydration, glow and practical aftercare.</p><a id="recLink" class="btn wa" style="margin-top:22px" target="_blank" href="https://wa.me/60168083598?text=Hi%2C%20I%20would%20like%20to%20ask%20about%20Radiance%20Ceremony.">Ask on WhatsApp</a></div></div></div></section></section>
 
-<section class="section treatments" id="treatments">
-  <div class="container">
-    <div class="kicker" style="color:var(--gold-soft)">Signature Treatments</div>
-    <h2 class="title">Curated beauty rituals</h2>
-    <p class="copy" style="color:#bbb3aa">Replace these samples with the salon's actual premium treatment menu.</p>
+<section class="page" data-view="membership"><section class="section"><div class="wrap"><div class="kicker">Private Club</div><h1 class="display">Beauty plans for ongoing care.</h1><p class="copy">These are salon membership concepts and can be replaced with the client’s real monthly or seasonal offers.</p><div class="memberships" style="margin-top:34px">
+<article class="membership"><small>MONTHLY</small><h3>Essential Edit</h3><div class="price">RM288</div><ul><li>One facial or hair treatment</li><li>Brow tidy</li><li>Priority WhatsApp booking</li></ul><a class="btn light" target="_blank" href="https://wa.me/60168083598?text=Hi%2C%20I%20would%20like%20to%20ask%20about%20Essential%20Edit.">Ask About Membership</a></article>
+<article class="membership featured"><small>SIGNATURE</small><h3>Aurelia Circle</h3><div class="price">RM588</div><ul><li>Two curated treatments monthly</li><li>Quarterly beauty consultation</li><li>Member-only event booking</li></ul><a class="btn light" target="_blank" href="https://wa.me/60168083598?text=Hi%2C%20I%20would%20like%20to%20ask%20about%20Aurelia%20Circle.">Ask About Membership</a></article>
+<article class="membership"><small>SEASONAL</small><h3>Event Season</h3><div class="price">RM888</div><ul><li>Skin preparation plan</li><li>Hair and beauty appointments</li><li>Event-day priority support</li></ul><a class="btn light" target="_blank" href="https://wa.me/60168083598?text=Hi%2C%20I%20would%20like%20to%20ask%20about%20Event%20Season.">Ask About Membership</a></article>
+</div></div></section></section>
 
-    <div class="treatment-grid">
-      <article class="treatment t1"><h3>Advanced Facial Care</h3><p>Consultation-led facials for hydration, clarity and radiant-looking skin.</p><strong>From RM188</strong></article>
-      <article class="treatment t2"><h3>Signature Hair Design</h3><p>Precision cuts, colour artistry and styling tailored to your personal image.</p><strong>From RM120</strong></article>
-      <article class="treatment t3"><h3>Luxury Nail Atelier</h3><p>Refined nail care, premium gel finishes and detailed custom artistry.</p><strong>From RM88</strong></article>
-      <article class="treatment t4"><h3>Eye Definition</h3><p>Elegant brow shaping, tinting and natural-looking lash enhancement.</p><strong>From RM68</strong></article>
-      <article class="treatment t5"><h3>Body Renewal</h3><p>Restorative body rituals created for relaxation, softness and wellbeing.</p><strong>From RM220</strong></article>
-      <article class="treatment t6"><h3>Bridal Atelier</h3><p>Private consultation and bespoke hair, makeup and preparation packages.</p><strong>Custom proposal</strong></article>
-    </div>
-  </div>
-</section>
+<section class="page" data-view="specialists"><section class="section"><div class="wrap"><div class="kicker">Specialists</div><h1 class="display">Choose by expertise.</h1><div class="team" style="margin-top:34px">
+<article class="member"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=85" alt="Amelia"><div><h3>Amelia</h3><p>Beauty Director</p><div class="socials"><a href="https://instagram.com" target="_blank">Instagram</a><a href="https://tiktok.com" target="_blank">TikTok</a></div></div></article>
+<article class="member"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=85" alt="Maya"><div><h3>Maya</h3><p>Skin Specialist</p><div class="socials"><a href="https://instagram.com" target="_blank">Instagram</a><a href="https://facebook.com" target="_blank">Facebook</a></div></div></article>
+<article class="member"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=85" alt="Sara"><div><h3>Sara</h3><p>Hair Colourist</p><div class="socials"><a href="https://instagram.com" target="_blank">Instagram</a><a href="https://youtube.com" target="_blank">YouTube</a></div></div></article>
+<article class="member"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=800&q=85" alt="Chloe"><div><h3>Chloe</h3><p>Bridal Artist</p><div class="socials"><a href="https://instagram.com" target="_blank">Instagram</a><a href="https://tiktok.com" target="_blank">TikTok</a></div></div></article>
+</div></div></section></section>
 
-<section class="section" id="experience">
-  <div class="container">
-    <div class="kicker">The Aurelia Experience</div>
-    <h2 class="title">Exceptional care in every detail</h2>
+<section class="page" data-view="occasions"><section class="section"><div class="wrap"><div class="kicker">Occasions</div><h1 class="display">Beauty planning for important days.</h1><div class="events" style="margin-top:34px">
+<article class="event" style="background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85')"><div><h3>Bridal Atelier</h3><p>Trial, timeline, hair, makeup and event-day preparation.</p><a target="_blank" href="https://wa.me/60168083598?text=Hi%2C%20I%20would%20like%20to%20ask%20about%20Bridal%20Atelier.">Plan on WhatsApp →</a></div></article>
+<article class="event" style="background-image:url('https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=900&q=85')"><div><h3>Private Beauty Day</h3><p>A half-day treatment itinerary for birthdays or personal celebrations.</p><a target="_blank" href="https://wa.me/60168083598?text=Hi%2C%20I%20would%20like%20to%20ask%20about%20Private%20Beauty%20Day.">Plan on WhatsApp →</a></div></article>
+<article class="event" style="background-image:url('https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=900&q=85')"><div><h3>Group Styling Suite</h3><p>Hair and makeup planning for small private groups.</p><a target="_blank" href="https://wa.me/60168083598?text=Hi%2C%20I%20would%20like%20to%20ask%20about%20Group%20Styling%20Suite.">Plan on WhatsApp →</a></div></article>
+</div></div></section></section>
 
-    <div class="experience-grid">
-      <div class="experience-card"><span>01</span><h3>Private Consultation</h3><p>We begin by understanding your goals, preferences and concerns.</p></div>
-      <div class="experience-card"><span>02</span><h3>Curated Treatment</h3><p>Your service is personalised using carefully selected products and techniques.</p></div>
-      <div class="experience-card"><span>03</span><h3>Calm Environment</h3><p>Appointments are thoughtfully paced for comfort, privacy and relaxation.</p></div>
-      <div class="experience-card"><span>04</span><h3>Aftercare Guidance</h3><p>Clear advice helps you maintain your results with confidence at home.</p></div>
-    </div>
-  </div>
-</section>
+<section class="page" data-view="journal"><section class="section"><div class="wrap"><div class="kicker">Journal & Social</div><h1 class="display">Aurelia notes and inspiration.</h1><div class="social-grid" style="margin-top:34px">
+<a class="social-item" href="https://instagram.com" target="_blank"><img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1100&q=85"><span>Instagram</span></a>
+<a class="social-item" href="https://tiktok.com" target="_blank"><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=900&q=85"><span>TikTok</span></a>
+<a class="social-item" href="https://facebook.com" target="_blank"><img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=800&q=85"><span>Facebook</span></a>
+<a class="social-item" href="https://instagram.com" target="_blank"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=85"><span>Nail Atelier</span></a>
+<a class="social-item" href="https://youtube.com" target="_blank"><img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=85"><span>YouTube</span></a>
+</div></div></section>
+<section class="section" style="background:#fff"><div class="wrap"><div class="kicker">Atelier Journal</div><h2 class="display">Useful advice from specialists.</h2><div class="journal" style="margin-top:34px">
+<article class="post"><img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=900&q=85"><div><h3>How to plan beauty treatments before an event</h3><p>A practical timeline for skin, hair, nails and makeup.</p></div></article>
+<article class="post"><img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=900&q=85"><div><h3>What to bring to a colour consultation</h3><p>Photos, maintenance expectations and information your colourist needs.</p></div></article>
+<article class="post"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=85"><div><h3>Choosing a manicure for a special occasion</h3><p>How to match colour, shape and finish to the event.</p></div></article>
+</div></div></section></section>
 
-<section class="section journal" id="journal">
-  <div class="container">
-    <div class="kicker">Beauty Journal</div>
-    <h2 class="title">Advice from our specialists</h2>
-
-    <div class="journal-grid">
-      <article class="article">
-        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=900&q=85" alt="Skin care">
-        <div class="article-body"><small>Skin</small><h3>How to prepare for your first facial</h3><p>Simple steps to help your consultation and treatment feel more effective and comfortable.</p></div>
-      </article>
-
-      <article class="article">
-        <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=900&q=85" alt="Hair care">
-        <div class="article-body"><small>Hair</small><h3>Choosing a hair colour that suits you</h3><p>What to consider before selecting a new shade, tone or maintenance routine.</p></div>
-      </article>
-
-      <article class="article">
-        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=85" alt="Nail care">
-        <div class="article-body"><small>Nails</small><h3>Keeping your manicure beautiful for longer</h3><p>Practical aftercare advice to protect your finish between appointments.</p></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section reviews">
-  <div class="container">
-    <div class="kicker" style="color:var(--gold-soft)">Client Notes</div>
-    <h2 class="title">A trusted beauty destination</h2>
-
-    <div class="review-grid">
-      <div class="review"><div class="stars">★★★★★</div><p>“The consultation was detailed and thoughtful. I felt completely looked after from beginning to end.”</p><strong>— Amelia</strong></div>
-      <div class="review"><div class="stars">★★★★★</div><p>“Beautiful space, exceptional service and results that felt natural and elegant.”</p><strong>— Charlotte</strong></div>
-      <div class="review"><div class="stars">★★★★★</div><p>“Aurelia feels calm and private. The team never rushes and always explains the treatment clearly.”</p><strong>— Sophia</strong></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="contact">
-  <div class="container">
-    <div class="kicker">Appointment & Location</div>
-    <h2 class="title">Begin your Aurelia experience</h2>
-    <p class="copy">Replace the sample Google Map, WhatsApp number and Google Form with the salon's actual details.</p>
-
-    <div class="contact-grid">
-      <div class="contact-card">
-        <div class="contact-info">
-          <h3>Aurelia Beauty Atelier</h3>
-
-          <div class="info">
-            <div>📍 Kuala Lumpur, Malaysia</div>
-            <div>🕒 Monday–Sunday, 10:00 AM–8:00 PM</div>
-            <div>📞 +60 12-345 6789</div>
-            <div>✉️ reservations@aureliabeauty.com</div>
-          </div>
-
-          <a class="btn btn-gold" style="width:100%;margin-top:22px" href="https://wa.me/60123456789?text=Hi%2C%20I%20would%20like%20to%20book%20a%20consultation%20at%20Aurelia%20Beauty%20Atelier." target="_blank">Book a Consultation</a>
-        </div>
-
-        <div class="map">
-          <iframe src="https://www.google.com/maps?q=Kuala%20Lumpur%20Malaysia&output=embed" loading="lazy" title="Aurelia Beauty Atelier Map"></iframe>
-        </div>
-      </div>
-
-      <div class="form-card">
-        <h3>Private Appointment Enquiry</h3>
-        <p class="copy">Customers can submit their preferred treatment, date and contact details.</p>
-
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScEXAMPLEFORMID/viewform?embedded=true" title="Aurelia Appointment Google Form">Loading…</iframe>
-      </div>
-    </div>
-  </div>
-</section>
-
+<section class="page" data-view="visit"><section class="section"><div class="wrap"><div class="kicker">Reserve</div><h1 class="display">Send a complete private consultation request.</h1><div class="contact-grid" style="margin-top:34px"><div class="panel"><div class="info"><h2>Aurelia Beauty Atelier</h2><div class="details"><div>📍 Kuala Lumpur, Malaysia</div><div>🕒 Monday–Sunday, 10:00 AM–8:00 PM</div><div>📞 +60 16-808 3598</div><div>✉️ reservations@aureliabeauty.com</div></div><div class="planner"><h3 style="font-family:'Bodoni Moda';font-size:28px">Private Consultation Planner</h3><div class="planner-grid" style="margin-top:16px"><input id="pname" placeholder="Your name"><select id="pservice"><option>Skin Consultation</option><option>Hair & Colour Consultation</option><option>Private Beauty Day</option><option>Bridal Atelier</option><option>Aurelia Circle Membership</option></select><input id="pdate" type="date"><input id="ptime" type="time"><textarea id="pnotes" placeholder="Beauty goals, preferred specialist or occasion details"></textarea></div><button id="planBtn" class="btn wa" style="width:100%;margin-top:16px">Send Request on WhatsApp</button></div></div></div><div class="panel map"><iframe src="https://www.google.com/maps?q=Kuala%20Lumpur%20Malaysia&output=embed" loading="lazy" title="Aurelia Beauty Atelier location"></iframe></div></div></div></section></section>
 </main>
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <a href="#home" class="brand" style="color:#fff">
-          <div class="mark"><span>A</span></div>
-          <div>AURELIA BEAUTY ATELIER</div>
-        </a>
-        <p style="margin-top:18px;max-width:430px">Luxury facial, hair, nail and wellness treatments delivered with care, privacy and precision.</p>
-      </div>
-
-      <div>
-        <h4>Explore</h4>
-        <a href="#about">Our Story</a>
-        <a href="#treatments">Treatments</a>
-        <a href="#experience">Experience</a>
-        <a href="#journal">Journal</a>
-      </div>
-
-      <div>
-        <h4>Reservations</h4>
-        <a href="https://wa.me/60123456789" target="_blank">WhatsApp</a>
-        <a href="mailto:reservations@aureliabeauty.com">Email</a>
-        <a href="#contact">Location</a>
-        <a href="#contact">Appointment Form</a>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <span>© 2026 Aurelia Beauty Atelier.</span>
-      <span>Luxury Beauty • Hair • Wellness</span>
-    </div>
-  </div>
-</footer>
-
-<a class="wa-float" href="https://wa.me/60123456789?text=Hi%2C%20I%20would%20like%20to%20book%20a%20consultation%20at%20Aurelia%20Beauty%20Atelier." target="_blank">💬 <span>WhatsApp</span></a>
+<footer><div class="wrap"><div class="footer-grid"><div><div class="brand">AURELIA <b>ATELIER</b></div><p style="margin-top:12px;max-width:420px">Private beauty consultation, couture rituals and considered event preparation.</p></div><div><h4>Explore</h4><a href="#" class="route" data-page="rituals">Rituals</a><a href="#" class="route" data-page="curator">Beauty Curator</a><a href="#" class="route" data-page="membership">Private Club</a></div><div><h4>Follow</h4><a href="https://instagram.com" target="_blank">Instagram</a><a href="https://tiktok.com" target="_blank">TikTok</a><a href="https://facebook.com" target="_blank">Facebook</a><a href="https://youtube.com" target="_blank">YouTube</a></div></div><div class="bottom">© 2026 Aurelia Beauty Atelier. Sample Signature website concept.</div></div></footer>
+<a class="float" target="_blank" href="https://wa.me/60168083598?text=Hi%2C%20I%20would%20like%20to%20ask%20about%20Aurelia%20Beauty%20Atelier.">WhatsApp</a>
 
 <script>
-const menuBtn=document.getElementById("menuBtn");
-const navLinks=document.getElementById("navLinks");
-menuBtn.addEventListener("click",()=>navLinks.classList.toggle("open"));
-document.querySelectorAll(".nav-links a").forEach(a=>a.addEventListener("click",()=>navLinks.classList.remove("open")));
-</script>
+const pages=[...document.querySelectorAll('[data-view]')],routes=[...document.querySelectorAll('.route')],links=document.getElementById('links');
+function go(name){pages.forEach(p=>p.classList.toggle('active',p.dataset.view===name));history.replaceState(null,'','#/'+name);window.scrollTo({top:0,behavior:'smooth'});links.classList.remove('open')}
+routes.forEach(b=>b.addEventListener('click',e=>{e.preventDefault();go(b.dataset.page)}));
+document.getElementById('menuBtn').onclick=()=>links.classList.toggle('open');
+go(location.hash.replace('#/','')||'home');
 
+document.querySelectorAll('.filter').forEach(btn=>btn.onclick=()=>{document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.filter;document.querySelectorAll('.card[data-cat]').forEach(c=>c.style.display=(f==='all'||c.dataset.cat===f)?'block':'none')});
+
+const recs={
+ skin:{single:["Radiance Ceremony","A focused consultation and glow treatment."],half:["Skin & Sculpt Half-Day","A facial plus eye and brow refinement."],plan:["Seasonal Skin Plan","A multi-visit pathway for hydration, clarity and maintenance."]},
+ hair:{single:["Signature Cut","A consultation-led haircut and style refresh."],half:["Couture Colour Session","Colour planning, treatment and finishing in one visit."],plan:["Colour Maintenance Plan","A planned series of colour and care appointments."]},
+ event:{single:["Event Styling Edit","Hair or makeup preparation for one occasion."],half:["Private Beauty Day","Hair, makeup, nails and skin preparation."],plan:["Bridal Atelier","Trials, preparation timeline and event-day services."]},
+ routine:{single:["Essential Edit","One practical maintenance treatment."],half:["Monthly Beauty Reset","A combination of two maintenance services."],plan:["Aurelia Circle","Ongoing beauty planning with priority access."]}
+};
+document.getElementById('curateBtn').onclick=()=>{const g=document.getElementById('goal').value,s=document.getElementById('style').value,[title,copy]=recs[g][s];document.getElementById('recTitle').textContent=title;document.getElementById('recCopy').textContent=copy;document.getElementById('recLink').href='https://wa.me/60168083598?text='+encodeURIComponent('Hi, I would like to ask about '+title+' at Aurelia Beauty Atelier.')};
+
+document.getElementById('planBtn').onclick=()=>{const name=document.getElementById('pname').value||'Not provided',service=document.getElementById('pservice').value,date=document.getElementById('pdate').value||'Flexible',time=document.getElementById('ptime').value||'Flexible',notes=document.getElementById('pnotes').value||'None';const msg=`Hi Aurelia Beauty Atelier! I would like to request a private consultation.\n\nName: ${name}\nService: ${service}\nPreferred date: ${date}\nPreferred time: ${time}\nNotes: ${notes}`;window.open('https://wa.me/60168083598?text='+encodeURIComponent(msg),'_blank')};
+</script>
 </body>
 </html>
